@@ -738,3 +738,41 @@ regenerate `models/` at submission time the way `data/` already is).
 | 5 | Tag every suggestion with source of inference | `config.Source`, exact SHAP, `provenance.py` — source tag + confidence + grounded explanation visible on every advisory card in the Recommendations panel | ✅ Complete |
 | 6 | Allow accept/reject, record responses to evaluate quality | `ledger.py` + Accept/Reject buttons + Trust & ledger panel — verified end-to-end in-browser (click Reject -> ledger updates -> acceptance rate and calibration text update live). `learning.py` (Phase 2 reranking) still pending | ✅ Complete (core), Phase 2 extends |
 | + | Presentation in the provided template (6-slide limit) | Reserved block | ⬜ Reserved |
+
+---
+
+## 12. Dev journal — 2026-07-25
+
+Long one. Started by moving off the sandbox and onto real hardware, which
+meant undoing all the corners I'd cut for a 45-second shell limit: Random
+Forest back up to full depth and tree count, SHAP and permutation sampling
+back up to a size I'd actually trust, corpus regenerated at 1500 events
+instead of 500. That alone surfaced a real environment problem — LightGBM and
+XGBoost won't load on this machine because of an architecture mismatch
+between Homebrew and Python, not something I could just pip-install my way
+out of. Decided it wasn't worth chasing a second Homebrew install for two of
+five candidate models when the pipeline was already built to degrade
+gracefully, so I let it degrade and moved on. Histogram Gradient Boosting
+ended up the selected model, and honestly the false-alarm rate improved a
+lot even though detection dipped slightly within noise.
+
+After that it was module after module, in the order I'd planned:
+forecasting, ROI pricing, the setpoint optimizer, correlation discovery,
+stabilization ranking, provenance, the accept/reject ledger, then the API,
+then the dashboard. Found and fixed a few real bugs along the way instead of
+just writing code and hoping — a grade code typo in a test, a missing
+early-stopping flag that made forecast training run way longer than it
+needed to, a NaN value that crashed the API's JSON responses, and a React
+state bug that left an entire form silently empty because it only read its
+props once instead of syncing with them. That last one I only caught because
+I actually opened the thing in a browser and clicked around instead of
+trusting that a clean build meant a working app.
+
+By the end of the day all six graded deliverables had working code behind
+them, not just a plan for them, and I could click through a real dashboard
+talking to a real API talking to real trained models. Spent the rest of the
+evening on repo hygiene — fixing commit authorship, checking nothing junky
+got committed, writing an honest README instead of the placeholder one from
+Phase 0. Tomorrow's the deadline, so what's left is a judgment call: spend
+remaining time on Phase 2 features, or lock in what's here and put the
+effort into packaging and the deck. Leaning toward the latter.
