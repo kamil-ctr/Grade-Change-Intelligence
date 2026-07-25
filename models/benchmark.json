@@ -1,0 +1,827 @@
+{
+  "summary": {
+    "n_events": 100,
+    "n_evaluated": 100,
+    "n_skipped": 0,
+    "success_rate": 0.57,
+    "n_success": 57,
+    "n_recipe_limit_source": 20,
+    "n_physics_model_source": 80,
+    "improvement_off_spec_minutes": {
+      "mean": 1.7875,
+      "median": 0.25,
+      "p95": 7.8375,
+      "max": 10.9167
+    },
+    "value_usd": {
+      "mean": 63.72,
+      "median": 8.28,
+      "p95": 312.28,
+      "total": 6372.28
+    },
+    "runtime_sec": 219.6,
+    "seed": 20260726
+  },
+  "events": [
+    {
+      "event_id": 0,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 1.3333,
+      "value_usd": 55.48,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 1,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 2.3333,
+      "value_usd": 97.1,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 2,
+      "from_grade": "SC-56",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 9.5833,
+      "value_usd": 398.8,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 3,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 4.8333,
+      "value_usd": 185.94,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 4,
+      "from_grade": "BRD-120",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 5,
+      "from_grade": "NP-45",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 6,
+      "from_grade": "WFU-80",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 7,
+      "from_grade": "NP-45",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.25,
+      "value_usd": 7.77,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 8,
+      "from_grade": "NP-45",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 3.1667,
+      "value_usd": 96.21,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 9,
+      "from_grade": "BRD-120",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 4.75,
+      "value_usd": 147.59,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 10,
+      "from_grade": "SC-56",
+      "to_grade": "WFU-80",
+      "improvement_off_spec_min": 3.75,
+      "value_usd": 125.77,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 11,
+      "from_grade": "NP-45",
+      "to_grade": "WFU-80",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 12,
+      "from_grade": "WFU-80",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.1667,
+      "value_usd": 4.81,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 13,
+      "from_grade": "LWC-52",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 7.9167,
+      "value_usd": 304.55,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 14,
+      "from_grade": "NP-45",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.6667,
+      "value_usd": 20.71,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 15,
+      "from_grade": "WFU-70",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 16,
+      "from_grade": "SC-56",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 2.4167,
+      "value_usd": 92.97,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 17,
+      "from_grade": "WFU-80",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 18,
+      "from_grade": "WFU-70",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 1.6667,
+      "value_usd": 43.93,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 19,
+      "from_grade": "NP-45",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 20,
+      "from_grade": "WFU-70",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 21,
+      "from_grade": "BRD-120",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 3.0833,
+      "value_usd": 88.96,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 22,
+      "from_grade": "BRD-150",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.1667,
+      "value_usd": 5.06,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 23,
+      "from_grade": "BRD-150",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 6.25,
+      "value_usd": 180.33,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 24,
+      "from_grade": "WFU-80",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 0.25,
+      "value_usd": 9.62,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 25,
+      "from_grade": "WFU-80",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 26,
+      "from_grade": "SC-56",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 27,
+      "from_grade": "NP-45",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 28,
+      "from_grade": "WFU-70",
+      "to_grade": "WFU-80",
+      "improvement_off_spec_min": 0.4167,
+      "value_usd": 13.97,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 29,
+      "from_grade": "BRD-120",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 30,
+      "from_grade": "SC-56",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 7.5833,
+      "value_usd": 315.57,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 31,
+      "from_grade": "NP-45",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 1.8333,
+      "value_usd": 56.96,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 32,
+      "from_grade": "NP-45",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.9167,
+      "value_usd": 26.45,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 33,
+      "from_grade": "BRD-120",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 34,
+      "from_grade": "BRD-150",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 35,
+      "from_grade": "LWC-52",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 36,
+      "from_grade": "BRD-150",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 7.8333,
+      "value_usd": 226.01,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 37,
+      "from_grade": "SC-56",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 2.5833,
+      "value_usd": 99.38,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 38,
+      "from_grade": "LWC-52",
+      "to_grade": "WFU-80",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 39,
+      "from_grade": "SC-56",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 40,
+      "from_grade": "LWC-52",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 0.5833,
+      "value_usd": 22.44,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 41,
+      "from_grade": "LWC-52",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.75,
+      "value_usd": 19.77,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 42,
+      "from_grade": "WFU-80",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 43,
+      "from_grade": "WFU-80",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 44,
+      "from_grade": "BRD-150",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 45,
+      "from_grade": "WFU-70",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.5,
+      "value_usd": 15.19,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 46,
+      "from_grade": "BRD-150",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 47,
+      "from_grade": "BRD-120",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 0.3333,
+      "value_usd": 13.87,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 48,
+      "from_grade": "BRD-120",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.6667,
+      "value_usd": 20.25,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 49,
+      "from_grade": "BRD-120",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 50,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 1.0833,
+      "value_usd": 45.08,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 51,
+      "from_grade": "SC-56",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.3333,
+      "value_usd": 8.79,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 52,
+      "from_grade": "WFU-80",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 53,
+      "from_grade": "WFU-80",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 54,
+      "from_grade": "WFU-80",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 55,
+      "from_grade": "WFU-80",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 3.8333,
+      "value_usd": 159.52,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 56,
+      "from_grade": "SC-56",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 3.5833,
+      "value_usd": 137.85,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 57,
+      "from_grade": "BRD-120",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 4.75,
+      "value_usd": 125.19,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 58,
+      "from_grade": "BRD-120",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.1667,
+      "value_usd": 4.39,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 59,
+      "from_grade": "BRD-150",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 6.4167,
+      "value_usd": 194.95,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 60,
+      "from_grade": "BRD-150",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 61,
+      "from_grade": "WFU-80",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 1.1667,
+      "value_usd": 36.25,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 62,
+      "from_grade": "NP-45",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 4.3333,
+      "value_usd": 166.7,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 63,
+      "from_grade": "WFU-70",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 64,
+      "from_grade": "WFU-80",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 65,
+      "from_grade": "WFU-80",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 2.25,
+      "value_usd": 86.56,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 66,
+      "from_grade": "NP-45",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 67,
+      "from_grade": "BRD-150",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 5.6667,
+      "value_usd": 149.35,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 68,
+      "from_grade": "LWC-52",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 6.5,
+      "value_usd": 201.97,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 69,
+      "from_grade": "BRD-120",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 2.0,
+      "value_usd": 62.14,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 70,
+      "from_grade": "BRD-120",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 71,
+      "from_grade": "SC-56",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.25,
+      "value_usd": 7.77,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 72,
+      "from_grade": "LWC-52",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.6667,
+      "value_usd": 20.25,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 73,
+      "from_grade": "BRD-150",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 74,
+      "from_grade": "WFU-70",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 75,
+      "from_grade": "BRD-150",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 76,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 8.6667,
+      "value_usd": 360.65,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 77,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 9.6667,
+      "value_usd": 402.27,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 78,
+      "from_grade": "BRD-120",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0833,
+      "value_usd": 2.53,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 79,
+      "from_grade": "BRD-120",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 80,
+      "from_grade": "BRD-120",
+      "to_grade": "WFU-80",
+      "improvement_off_spec_min": 0.1667,
+      "value_usd": 5.59,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 81,
+      "from_grade": "LWC-52",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 82,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 0.5833,
+      "value_usd": 22.44,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 83,
+      "from_grade": "WFU-80",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 4.0,
+      "value_usd": 153.88,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 84,
+      "from_grade": "BRD-120",
+      "to_grade": "WFU-80",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 85,
+      "from_grade": "LWC-52",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 7.5,
+      "value_usd": 312.1,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 86,
+      "from_grade": "BRD-120",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 3.0,
+      "value_usd": 91.14,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 87,
+      "from_grade": "LWC-52",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 10.9167,
+      "value_usd": 454.28,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 88,
+      "from_grade": "WFU-80",
+      "to_grade": "BRD-120",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 89,
+      "from_grade": "BRD-120",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 90,
+      "from_grade": "NP-45",
+      "to_grade": "SC-56",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 91,
+      "from_grade": "WFU-70",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 92,
+      "from_grade": "WFU-70",
+      "to_grade": "BRD-150",
+      "improvement_off_spec_min": 3.5,
+      "value_usd": 145.65,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 93,
+      "from_grade": "WFU-80",
+      "to_grade": "LWC-52",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 94,
+      "from_grade": "WFU-70",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.4167,
+      "value_usd": 10.98,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 95,
+      "from_grade": "BRD-150",
+      "to_grade": "WFU-80",
+      "improvement_off_spec_min": 1.0833,
+      "value_usd": 36.33,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 96,
+      "from_grade": "WFU-70",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "RECIPE_LIMIT"
+    },
+    {
+      "event_id": 97,
+      "from_grade": "BRD-150",
+      "to_grade": "WFU-70",
+      "improvement_off_spec_min": 4.1667,
+      "value_usd": 129.47,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 98,
+      "from_grade": "BRD-150",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 5.4167,
+      "value_usd": 142.76,
+      "source": "PHYSICS_MODEL"
+    },
+    {
+      "event_id": 99,
+      "from_grade": "WFU-70",
+      "to_grade": "NP-45",
+      "improvement_off_spec_min": 0.0,
+      "value_usd": 0.0,
+      "source": "PHYSICS_MODEL"
+    }
+  ]
+}
