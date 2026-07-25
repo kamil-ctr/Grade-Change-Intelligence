@@ -26,3 +26,7 @@ venv/
 .DS_Store
 .idea/
 .vscode/
+
+
+# Packaged submission artifact — build with scripts/package_submission.sh
+gci-submission.zip
