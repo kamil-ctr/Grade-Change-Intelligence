@@ -13,9 +13,12 @@ export default function App() {
   const [eventId, setEventId] = useState(null)
   const [tMin, setTMin] = useState(12)
   const [live, setLive] = useState(null)
-  const [advisories, setAdvisories] = useState([])
-  const [correlations, setCorrelations] = useState([])
-  const [stabilization, setStabilization] = useState([])
+  // null = not yet fetched (loading state); [] = fetched, genuinely empty.
+  // Panels need to tell those apart to show a skeleton vs. an empty-state
+  // message instead of flashing "no data" before the first response lands.
+  const [advisories, setAdvisories] = useState(null)
+  const [correlations, setCorrelations] = useState(null)
+  const [stabilization, setStabilization] = useState(null)
   const [trust, setTrust] = useState(null)
   const [economics, setEconomics] = useState(null)
   const [error, setError] = useState(null)
