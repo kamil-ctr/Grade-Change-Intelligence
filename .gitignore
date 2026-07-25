@@ -1,9 +1,15 @@
 # Generated corpus — fully seed-determined, rebuild with scripts/generate_data.py
 data/
 
-# Trained artefacts — rebuild with scripts/train_risk_model.py
+# Trained artefacts — rebuild with scripts/train_risk_model.py /
+# scripts/train_forecast_model.py. Exception: risk_model.joblib (~1.6 MB)
+# and forecast_model.joblib (~14 MB) ARE committed so the Render-hosted API
+# has real models without training in the build step — this is separate
+# from, and does not affect, the submission zip's own 10 MB limit.
 models/checkpoints/
 models/*.joblib
+!models/risk_model.joblib
+!models/forecast_model.joblib
 
 # Python
 __pycache__/

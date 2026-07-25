@@ -1,4 +1,8 @@
-const BASE = '/api'
+// In dev, Vite proxies /api to localhost (see vite.config.js) so the default
+// works with no env var. In production the frontend and backend are on
+// different hosts (Vercel + Render), so VITE_API_BASE must point at the
+// deployed API, e.g. https://gci-api.onrender.com/api
+const BASE = import.meta.env.VITE_API_BASE || '/api'
 
 async function request(path, options) {
   const res = await fetch(`${BASE}${path}`, {

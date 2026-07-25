@@ -9,10 +9,12 @@ Run with:
 from __future__ import annotations
 
 import math
+import os
 from pathlib import Path
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
@@ -59,6 +61,21 @@ app = FastAPI(
     description="Advisory intelligence layer for automatic grade changes. Advisory only -- never writes to a control system.",
     version="0.1.0",
     default_response_class=NanSafeJSONResponse,
+)
+
+# The frontend and API are deployed on different hosts (Vercel + Render), so
+# the browser's same-origin policy needs an explicit opt-in. No cookies or
+# auth tokens cross this boundary (the demo has no login), so a wildcard
+# origin is safe here -- CORS is not a security boundary for a public,
+# unauthenticated, advisory-only read/write API. Set CORS_ORIGINS (comma
+# separated) to restrict this in a less trusting deployment.
+_cors_origins = os.environ.get("CORS_ORIGINS", "*")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"] if _cors_origins == "*" else _cors_origins.split(","),
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
