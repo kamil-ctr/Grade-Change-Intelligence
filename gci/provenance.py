@@ -90,12 +90,22 @@ def explain_correlation(result: CorrelationResult) -> str:
 
 def explain_optimization(result: OptimizationResult) -> str:
     imp = result.improvement.get("off_spec_minutes", 0.0)
-    return (
+    change = (
         f"Adjusting the ramp from {result.baseline_plan.ramp_min:.1f} to "
         f"{result.plan.ramp_min:.1f} min (lead x{result.plan.lead_scale:.2f}, "
-        f"trim tau_c x{result.plan.tau_c_scale:.2f}) is predicted to reduce "
-        f"off-spec time by {imp:.2f} min on the twin."
+        f"trim tau_c x{result.plan.tau_c_scale:.2f})"
     )
+    if result.source == Source.RECIPE_LIMIT:
+        # The baseline ramp was below what the actuators can physically
+        # deliver -- this isn't a simulated preference among feasible
+        # options, it's the recipe's own slew-rate arithmetic.
+        return (
+            f"{change} is required: the requested ramp is below the "
+            f"{result.min_ramp_min:.1f} min the {result.binding_actuator} "
+            f"actuator can physically deliver for this transition. Predicted "
+            f"to reduce off-spec time by {imp:.2f} min."
+        )
+    return f"{change} is predicted to reduce off-spec time by {imp:.2f} min on the twin."
 
 
 def explain_stabilization(impact: LoopImpact) -> str:

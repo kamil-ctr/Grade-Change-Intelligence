@@ -3,6 +3,17 @@ import { api } from '../lib/api'
 
 const fmtUsd = (v) => `$${Math.round(v).toLocaleString()}`
 
+// Maps backend Source tags to the hackathon brief's own vocabulary
+// ("historical data / recipe / learned correlation / rule"). Falls back to
+// the backend's own source_label for anything not in this list.
+const SOURCE_LABELS = {
+  RISK_MODEL: 'Learned model',
+  PHYSICS_MODEL: 'Physics / recipe rule',
+  CORRELATION_DISCOVERY: 'Learned correlation',
+  RECIPE_LIMIT: 'Recipe constraint',
+  HISTORICAL_DATA: 'Historical precedent',
+}
+
 export default function RecommendationsPanel({ advisories, onDecided }) {
   const [decisions, setDecisions] = useState({})
   const [pending, setPending] = useState(null)
@@ -32,7 +43,7 @@ export default function RecommendationsPanel({ advisories, onDecided }) {
           <div className="advisory-card" key={a.id}>
             <div className="top-row">
               <div className="title">{a.title}</div>
-              <span className={`source-tag ${a.source}`}>{a.source_label}</span>
+              <span className={`source-tag ${a.source}`}>{SOURCE_LABELS[a.source] || a.source_label}</span>
             </div>
             <div className="explanation">{a.explanation}</div>
             {a.value && (

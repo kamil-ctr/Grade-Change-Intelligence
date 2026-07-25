@@ -238,6 +238,20 @@ def recommend_plan(
         if k in baseline_labels and k in recommended_labels
     }
 
+    # When the baseline plan was already below the recipe's own physical
+    # feasibility floor, the dominant content of "the recommendation" is
+    # simply "this ramp violates the actuator envelope" -- pure recipe
+    # arithmetic (`control.min_feasible_ramp_min`), not a twin-simulated
+    # optimization insight. That is RECIPE_LIMIT provenance, not
+    # PHYSICS_MODEL: no simulation uncertainty is involved in knowing a
+    # drive cannot move faster than its slew limit. Once the baseline is
+    # already feasible, the search is genuinely comparing simulated
+    # outcomes within the feasible region, which is PHYSICS_MODEL.
+    source = (
+        Source.RECIPE_LIMIT if baseline_plan.ramp_min < floor_min - 1e-9
+        else Source.PHYSICS_MODEL
+    )
+
     result = OptimizationResult(
         plan=best_plan,
         baseline_plan=baseline_plan,
@@ -249,6 +263,7 @@ def recommend_plan(
         min_ramp_min=floor_min,
         binding_actuator=binding_actuator,
         to_grade=to_grade,
+        source=source,
     )
 
     if use_cache:

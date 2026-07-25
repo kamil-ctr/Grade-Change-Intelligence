@@ -108,7 +108,11 @@ class TestRecommendPlan(unittest.TestCase):
             seed=3, n_per_dim=5, n_rounds=1, use_cache=False,
         )
         value = result.price()
-        self.assertEqual(value.source, Source.PHYSICS_MODEL)
+        # ramp_min=3.0 is below this transition's feasibility floor, so the
+        # result is tagged RECIPE_LIMIT (pure recipe arithmetic), not
+        # PHYSICS_MODEL -- see recommend_plan's source-selection logic.
+        self.assertEqual(result.source, Source.RECIPE_LIMIT)
+        self.assertEqual(value.source, Source.RECIPE_LIMIT)
         self.assertEqual(value.grade_code, "BRD-120")
         self.assertEqual(value.confidence, PHYSICS_MODEL_CONFIDENCE)
 
