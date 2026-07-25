@@ -61,7 +61,7 @@ python scripts/generate_data.py --events 1500
 python scripts/train_risk_model.py
 python scripts/train_forecast_model.py
 
-# Run the full test suite (226 tests)
+# Run the full test suite (251 tests)
 python -m unittest discover -s tests -t .
 
 # Serve the API
@@ -105,10 +105,29 @@ this machine) — stated here rather than rounded up. Full numbers, per-model
 comparisons and the reasoning behind every modelling choice are in
 `models/evaluation_report.md` and `PROJECT_LOG.md` §9.
 
+Setpoint optimizer (`gci/optimizer.py`), benchmarked across a 100-event demo
+corpus — every transition re-planned exactly as the dashboard's "Recommended
+plan" card does, baseline vs. optimizer-recommended plan on the twin:
+
+| Metric | Value |
+|---|---|
+| Transitions where the recommendation reduces off-spec time | **57.0%** (57/100) |
+| Off-spec minutes avoided, mean / median / P95 | 1.79 / 0.25 / 7.84 min |
+| Recommended-plan value, mean / median | $64 / $8 |
+| Total priced value across the corpus | $6,372 |
+
+The remaining 43% are not failures: many logged baselines are already
+feasible and near-optimal, so a zero-improvement result means the optimizer
+correctly found nothing better, not that it missed something. Regenerate
+with `python scripts/benchmark_stabilization.py`; full per-event detail in
+`models/benchmark.json` and `models/benchmark_report.md`.
+
 Corpus: 1,500 simulated grade changes, 504,000 feature rows, 62.5% off-spec
 rate (deliberately high — hard transitions and rushed ramps, by design, to
 keep the prediction problem learnable; see `PROJECT_LOG.md` known limitation
-5). **226 tests passing, 0 failing.**
+5). **251 tests passing, 0 failing** (25 of which specifically exercise API
+robustness against malformed and out-of-range input — see
+`tests/test_robustness.py`).
 
 ---
 
@@ -122,6 +141,18 @@ keep the prediction problem learnable; see `PROJECT_LOG.md` known limitation
 | 4 | Dashboard: loops/parameters driving stabilization + setpoints to stabilize faster | `gci/stabilization.py`, served at `/api/stabilization`; rendered in the Stabilization impact panel |
 | 5 | Tag every suggestion with source of inference | `gci/config.py` (`Source` enum) + exact SHAP (`gci/ml/explain.py`) + `gci/provenance.py`; every advisory card shows its source tag, confidence, and a grounded explanation |
 | 6 | Allow accept/reject, record responses to evaluate quality | `gci/ledger.py`, served at `POST /api/recommendations/{id}/feedback` and `GET /api/trust`; rendered in the Trust & ledger panel with live acceptance-rate and confidence-calibration feedback |
+
+### Recommendations vs. insights
+
+We distinguish two kinds of dashboard content. Recommendations
+(Recommendations panel — `Physics / recipe rule`, `Recipe constraint`,
+`Learned model` tags) are actionable: a specific plan change, priced in
+dollars, with an accept/reject control. Insights (Correlation Explorer,
+Stabilization impact) are diagnostic: what the data or the twin reveals
+about a transition, with no single prescribed action attached. We do not
+price or gate insights the way we price recommendations — collapsing the
+two would either under-price a genuine diagnostic or over-claim certainty
+for an exploratory finding.
 
 ---
 
