@@ -21,7 +21,15 @@ export default function EconomicsPanel({ economics, onSaved }) {
     if (economics) setValues(economics)
   }, [economics])
 
-  if (!economics) return null
+  if (!economics) {
+    return (
+      <div>
+        <div className="skeleton-line long" />
+        <div className="skeleton-line long" />
+        <div className="skeleton-line medium" />
+      </div>
+    )
+  }
 
   function set(key, v) {
     setSaved(false)
