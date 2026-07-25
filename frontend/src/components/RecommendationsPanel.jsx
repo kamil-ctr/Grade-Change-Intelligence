@@ -18,7 +18,16 @@ export default function RecommendationsPanel({ advisories, onDecided }) {
   const [decisions, setDecisions] = useState({})
   const [pending, setPending] = useState(null)
 
-  if (!advisories || advisories.length === 0) {
+  if (advisories === null) {
+    return (
+      <div>
+        <div className="skeleton-line long" />
+        <div className="skeleton-line medium" />
+        <div className="skeleton-line short" />
+      </div>
+    )
+  }
+  if (advisories.length === 0) {
     return <div className="empty-state">Nothing meets the surfacing policy for this transition right now.</div>
   }
 
@@ -55,7 +64,7 @@ export default function RecommendationsPanel({ advisories, onDecided }) {
                 </span>
               </div>
             )}
-            <div className="confidence">confidence {(a.confidence * 100).toFixed(0)}%</div>
+            <div className="confidence">confidence {(a.confidence * 100).toFixed(1)}%</div>
             <div className="btn-row" style={{ marginTop: 8 }}>
               {decision ? (
                 <span className={`decision-tag ${decision}`}>{decision === 'accepted' ? 'Accepted' : 'Rejected'}</span>
