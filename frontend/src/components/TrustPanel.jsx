@@ -1,8 +1,15 @@
-const pct = (v) => (Number.isFinite(v) ? `${Math.round(v * 100)}%` : '--')
+const pct = (v) => (Number.isFinite(v) ? `${(v * 100).toFixed(1)}%` : '--')
 const fmtUsd = (v) => `$${Math.round(v).toLocaleString()}`
 
 export default function TrustPanel({ trust }) {
-  if (!trust) return null
+  if (!trust) {
+    return (
+      <div>
+        <div className="skeleton-line short" />
+        <div className="skeleton-line medium" />
+      </div>
+    )
+  }
   return (
     <div>
       <div className="stat-row">
