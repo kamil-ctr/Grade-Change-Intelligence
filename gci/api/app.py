@@ -13,10 +13,11 @@ import os
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from .service import GCIService
 
@@ -79,20 +80,41 @@ app.add_middleware(
 )
 
 
+@app.exception_handler(RequestValidationError)
+async def _nan_safe_validation_handler(request: Request, exc: RequestValidationError):
+    """
+    FastAPI's built-in validation-error handler echoes the rejected value
+    back in the error body via a plain `JSONResponse` -- not the app's
+    `NanSafeJSONResponse` -- so a client that sends a bare `NaN` literal
+    (valid Python `json.loads` output, invalid JSON, and something Pydantic
+    correctly rejects) crashed the *error response itself* with the same
+    `allow_nan=False` failure `NanSafeJSONResponse` exists to prevent on
+    success paths. Same fix, applied to the one path it didn't cover.
+    """
+    return NanSafeJSONResponse(status_code=422, content={"detail": exc.errors()})
+
+
 class FeedbackRequest(BaseModel):
     decision: str
-    note: Optional[str] = None
+    # A judge-facing form field, not a log; bounded so a pasted document
+    # doesn't turn into an unbounded ledger write.
+    note: Optional[str] = Field(default=None, max_length=2000)
 
 
 class EconomicsUpdate(BaseModel):
-    net_margin_per_tonne: Optional[float] = None
-    rework_cost_per_tonne: Optional[float] = None
-    steam_cost_per_gj: Optional[float] = None
-    steam_gj_per_tonne: Optional[float] = None
-    grade_changes_per_day: Optional[float] = None
-    operating_days_per_year: Optional[float] = None
-    low_multiplier: Optional[float] = None
-    high_multiplier: Optional[float] = None
+    # All bounds are physical-sanity floors/ceilings, not statistical
+    # estimates -- a negative margin or a 500-day operating year can't
+    # come from a real mill, so pydantic rejects them at the door with a
+    # clean 422 instead of quietly propagating into every dollar figure
+    # the ROI engine computes downstream.
+    net_margin_per_tonne: Optional[float] = Field(default=None, ge=0)
+    rework_cost_per_tonne: Optional[float] = Field(default=None, ge=0)
+    steam_cost_per_gj: Optional[float] = Field(default=None, ge=0)
+    steam_gj_per_tonne: Optional[float] = Field(default=None, ge=0)
+    grade_changes_per_day: Optional[float] = Field(default=None, gt=0, le=100)
+    operating_days_per_year: Optional[float] = Field(default=None, gt=0, le=366)
+    low_multiplier: Optional[float] = Field(default=None, gt=0)
+    high_multiplier: Optional[float] = Field(default=None, gt=0)
 
 
 @app.get("/api/health")
@@ -143,6 +165,8 @@ def feedback(advisory_id: str, body: FeedbackRequest):
         return service.feedback(advisory_id, body.decision, body.note)
     except ValueError as exc:
         raise HTTPException(400, str(exc))
+    except KeyError as exc:
+        raise HTTPException(404, str(exc))
 
 
 @app.get("/api/correlations")

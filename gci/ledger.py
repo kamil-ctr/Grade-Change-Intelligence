@@ -75,6 +75,14 @@ class AdvisoryLedger:
         self.entries.append(entry)
         return entry.entry_id
 
+    def was_surfaced(self, advisory_id: str) -> bool:
+        """Has this advisory ever actually been shown to the operator? A
+        request forging an advisory_id that was never surfaced is malformed
+        input, not a real accept/reject -- callers use this to reject it
+        with a clean not-found rather than silently logging a response that
+        can never be paired with anything in `evaluate()`."""
+        return advisory_id in self._surfaced()
+
     def respond(
         self, advisory_id: str, decision: str, note: Optional[str] = None,
         timestamp: Optional[float] = None,
@@ -83,6 +91,8 @@ class AdvisoryLedger:
         previously surfaced advisory."""
         if decision not in DECISIONS:
             raise ValueError(f"decision must be one of {DECISIONS}, got {decision!r}")
+        if not self.was_surfaced(advisory_id):
+            raise KeyError(f"advisory_id {advisory_id!r} was never surfaced")
         entry = LedgerEntry(
             entry_id=str(uuid.uuid4()),
             kind="response",
