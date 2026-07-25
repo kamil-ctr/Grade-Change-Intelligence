@@ -695,7 +695,7 @@ deterministic, which is what makes the modelling problem real.
 
 ## 10. Next steps
 
-**Phase 1 (MVP) is complete.** All ten modules built, tested (226 Python
+**Phase 1 (MVP) is complete.** All ten modules built, tested (251 Python
 tests + live in-browser verification), and wired end to end:
 
 1. ~~`gci/ml/` + risk predictor~~ — ✅ Hist Gradient Boosting on this machine, test PR-AUC 0.827, detection 0.827, 4.67 min median warning
@@ -720,10 +720,10 @@ tests + live in-browser verification), and wired end to end:
   `CLAUDE.md` explicitly reserves the last ~2 hours for this and warns
   against writing the deck in the final ten minutes.
 
-**Known packaging item to resolve before submission:** `models/` (with
-`forecast_model.joblib` at 14.3 MB) plus `data/` likely exceed the 10 MB zip
-limit combined — needs a decision (slim the persisted forecast bundle vs.
-regenerate `models/` at submission time the way `data/` already is).
+**Packaging item resolved (2026-07-26):** `scripts/package_submission.sh`
+builds the zip from `git ls-files`, excluding the two committed `.joblib`
+artefacts (16 MB combined — kept in git for the Render deploy, regenerable
+via `scripts/train_*.py`) and the stale `HANDOFF.md`. Output is 212 KB.
 
 ---
 
@@ -776,3 +776,61 @@ got committed, writing an honest README instead of the placeholder one from
 Phase 0. Tomorrow's the deadline, so what's left is a judgment call: spend
 remaining time on Phase 2 features, or lock in what's here and put the
 effort into packaging and the deck. Leaning toward the latter.
+
+---
+
+## 13. Dev journal — 2026-07-26
+
+Deadline day. Decided against Phase 2 — chose to spend the day making what's
+already built provably solid instead of adding more surface area a judge
+could poke a hole in the day of the demo.
+
+Went looking for loose ends first rather than assuming everything from
+yesterday was tight. Found two real gaps in the provenance work: the
+optimizer never actually produced a `RECIPE_LIMIT` advisory even though the
+enum existed for exactly that case (a baseline plan below the physical
+feasibility floor), so every recommendation was labelled `PHYSICS_MODEL`
+regardless of whether the twin did any real optimization or the answer was
+just "the actuator can't move that fast." Fixed that at the source in
+`optimizer.py`, not by relabelling in the UI. Also found `HISTORICAL_DATA`
+and `OPERATOR_PRECEDENT` sitting in the `Source` taxonomy with nothing
+behind them — no code path produces either one. Left them defined rather
+than deleting or faking a producer just to make the enum look fully used;
+an honest gap beats a fabricated one.
+
+Then went after the API's edge behavior on purpose, on the theory that a
+judge bringing their own numbers is exactly the scenario a demo built
+against one curated storyline hasn't been tested on. Wrote 25 tests that
+throw malformed JSON, wrong types, out-of-range values, and unknown IDs at
+every endpoint that takes a body or an identifier. One of them caught a real
+bug immediately: a bare `NaN` JSON literal crashed FastAPI's own built-in
+validation-error handler, because that handler responds with a plain
+`JSONResponse` instead of the app's NaN-safe one — the earlier NaN fix only
+covered the success path, not the rejection path. Small thing, but exactly
+the kind of small thing that turns into a live 500 in front of a judge.
+
+Checked performance before touching anything, instead of assuming the app
+was slow — DevTools Network tab, panel by panel. Nothing crossed 2 seconds,
+so I left the code alone rather than "optimizing" something that wasn't
+broken.
+
+Did one more UI pass, deliberately conservative: real loading skeletons
+instead of a panel just going blank while data is in flight, consistent
+decimal formatting across panels, a bit more breathing room. No new
+components, no new colors, no restructuring — the six-panel layout from
+yesterday earns its spot on the slide, it didn't need reinventing.
+
+Built the two things that were still missing real evidence rather than a
+plan for evidence: an aggregate benchmark of the optimizer across 100
+transitions (57% improve, median 0.25 min / P95 7.84 min off-spec avoided,
+$6,372 total priced value) instead of leaning on one cherry-picked demo
+transition, and an actual packaging script, because "the repo is probably
+under 10 MB" turned out to be wrong by 7 MB once the two trained model
+files were counted — the fix was excluding them from the zip (not the git
+repo, since Render still needs them) and regenerating from
+`scripts/train_*.py` if a judge wants to retrain from scratch.
+
+Full suite is at 251 tests, all green, no regressions from any of today's
+changes. What's left is the deck, the screenshots, and one clean-checkout
+rehearsal — the part CLAUDE.md said to reserve two hours for, and the part
+I intend to actually reserve time for instead of writing at 11pm.

@@ -4,6 +4,80 @@ Kept synchronised with the codebase. Newest first.
 
 ---
 
+## [0.9.1] — 2026-07-26 — Pre-submission audit: provenance, robustness, UI, packaging
+
+### Added
+
+- `Source.RECIPE_LIMIT` wired into `gci/optimizer.py`'s `recommend_plan`:
+  a baseline plan below the transition's physical feasibility floor is now
+  tagged `RECIPE_LIMIT` (pure recipe/actuator arithmetic) rather than
+  `PHYSICS_MODEL` (twin-simulated optimization), with a matching branch in
+  `gci/provenance.py::explain_optimization`. Frontend `SOURCE_LABELS`
+  mapping added to `RecommendationsPanel.jsx` matching the brief's own
+  vocabulary (`Learned model`, `Physics / recipe rule`, `Learned
+  correlation`, `Recipe constraint`, `Historical precedent`).
+  `Source.HISTORICAL_DATA`/`OPERATOR_PRECEDENT` remain defined in the
+  taxonomy with no producing code path in this build — left as-is rather
+  than fabricated, per an explicit instruction not to invent a code path
+  just to justify keeping a label.
+- `tests/test_robustness.py` (25 tests): every endpoint accepting a request
+  body or a user-supplied identifier — feedback, economics, event lookup —
+  asserted to return a clean 4xx (never a 500) on malformed JSON, wrong
+  types, out-of-range values, unknown IDs, oversized/control-character/
+  unicode notes, and the bare `NaN` JSON literal. Found and fixed a real
+  bug in the process: FastAPI's built-in `RequestValidationError` handler
+  used a plain `JSONResponse`, not the app's `NanSafeJSONResponse`, so a
+  `NaN` literal in a request body crashed the handler itself. Fixed with a
+  dedicated `@app.exception_handler(RequestValidationError)`.
+  `gci/ledger.py` gained `AdvisoryLedger.was_surfaced()`, and `respond()`
+  now raises `KeyError` for an advisory ID that was never actually surfaced
+  (previously it would silently record a decision for an ID that never
+  existed).
+- `scripts/benchmark_stabilization.py`: aggregate benchmark of
+  `recommend_plan` across a 100-event demo corpus (reuses `gci/optimizer.py`
+  and `gci/roi.py` unchanged) — 57.0% of transitions improved, mean 1.79 /
+  median 0.25 / P95 7.84 off-spec minutes avoided, $6,372 total priced value.
+  Writes `models/benchmark.json` (per-event detail) and
+  `models/benchmark_report.md`. README's Results section now cites these
+  numbers instead of only single-transition demo evidence.
+- `scripts/package_submission.sh`: builds the submission zip from
+  `git ls-files`, excluding the two committed `.joblib` model artefacts
+  (16 MB combined, needed in the git repo for the Render deploy but not for
+  grading — regenerable via `scripts/train_*.py`) and the stale
+  `HANDOFF.md`. Output: 212 KB, well under the 10 MB limit — resolves the
+  packaging risk `PROJECT_LOG.md` had flagged and deferred since Phase 1.
+
+### Changed
+
+- Frontend loading states: every panel that fetches data (`ForecastCone`,
+  `RecommendationsPanel`, `CorrelationTable`, `StabilizationBars`,
+  `TrustPanel`, `EconomicsPanel`) now distinguishes "still loading"
+  (skeleton lines) from "loaded and genuinely empty" (an explicit
+  empty-state message) — previously both states rendered as a blank gap,
+  which reads as a broken panel on first paint or a slow connection.
+  `App.jsx`'s corresponding state now initialises to `null`, not `[]`.
+- Visual spacing/contrast pass (`styles.css`): larger grid gap and panel
+  padding, softer single-layer shadow, lighter border — no new colors, no
+  new components, no layout restructuring.
+- Numeric formatting made consistent across panels: percentages to one
+  decimal place throughout (confidence, acceptance rate, mean-confidence
+  bars), forecast horizon timestamps to two decimals.
+
+### Verified
+
+Full suite: 251/251 passing (226 prior + 25 new robustness tests), 0
+regressions from the loading-state/formatting changes. Manually re-sent the
+6 malformed-input payload classes from the robustness pass against a live
+local server — all return clean 4xx, no crashes. Clicked through all 6
+panels in a real browser, including Accept, Reject, and switching the
+transition dropdown to a fresh event — all update correctly, and the
+`RECIPE_LIMIT` provenance tag is visible end-to-end from optimizer through
+the Recommendations card to the Trust panel's per-source breakdown.
+DevTools Network tab checked per panel under Pass B; nothing exceeded 2s,
+so no performance changes were made.
+
+---
+
 ## [0.9.0] — 2026-07-25 — React dashboard: Phase 1 (MVP) complete
 
 ### New files
