@@ -5,7 +5,16 @@ const PARAM_LABEL = {
 }
 
 export default function StabilizationBars({ impacts }) {
-  if (!impacts || impacts.length === 0) {
+  if (impacts === null) {
+    return (
+      <div>
+        <div className="skeleton-line medium" />
+        <div className="skeleton-line long" />
+        <div className="skeleton-line medium" />
+      </div>
+    )
+  }
+  if (impacts.length === 0) {
     return <div className="empty-state">No stabilization data for this transition.</div>
   }
   const maxAbs = Math.max(...impacts.map((i) => Math.abs(i.sensitivity_min_per_unit)), 0.01)
