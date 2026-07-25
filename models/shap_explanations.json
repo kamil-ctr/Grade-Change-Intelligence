@@ -1,0 +1,651 @@
+{
+  "method": "shap.TreeExplainer",
+  "exact": true,
+  "base_value": -3.939850354162091,
+  "n_rows_explained": 600,
+  "mean_abs_shap": [
+    {
+      "feature": "t_since_ramp_min",
+      "mean_abs_shap": 1.4758323187083868
+    },
+    {
+      "feature": "bw_dev_headroom_pct",
+      "mean_abs_shap": 0.7752532990133784
+    },
+    {
+      "feature": "bw_abs_dev_pct",
+      "mean_abs_shap": 0.608355655023278
+    },
+    {
+      "feature": "ramp_progress",
+      "mean_abs_shap": 0.6059688103240147
+    },
+    {
+      "feature": "plan_tau_c_scale",
+      "mean_abs_shap": 0.42582913286514806
+    },
+    {
+      "feature": "mv_machine_speed_slew_util",
+      "mean_abs_shap": 0.4071967226991961
+    },
+    {
+      "feature": "transition_magnitude",
+      "mean_abs_shap": 0.3673759365227197
+    },
+    {
+      "feature": "plan_trim_enabled",
+      "mean_abs_shap": 0.35970029276073207
+    },
+    {
+      "feature": "mv_stock_flow_remaining",
+      "mean_abs_shap": 0.3562023217011421
+    },
+    {
+      "feature": "plan_ramp_min",
+      "mean_abs_shap": 0.34615042602630297
+    },
+    {
+      "feature": "ramp_deficit_min",
+      "mean_abs_shap": 0.3223099681360597
+    },
+    {
+      "feature": "plan_lead_scale",
+      "mean_abs_shap": 0.3095611162982545
+    },
+    {
+      "feature": "mv_machine_speed_remaining_frac",
+      "mean_abs_shap": 0.303195390195984
+    },
+    {
+      "feature": "mv_stock_flow_remaining_frac",
+      "mean_abs_shap": 0.2737256593931054
+    },
+    {
+      "feature": "bw_change_pct",
+      "mean_abs_shap": 0.20950317243676242
+    },
+    {
+      "feature": "mv_stock_flow_slew_util",
+      "mean_abs_shap": 0.2039029143976903
+    },
+    {
+      "feature": "bw_dev_max_2min",
+      "mean_abs_shap": 0.19814144116152982
+    },
+    {
+      "feature": "dv_headbox_consistency_roc_2min",
+      "mean_abs_shap": 0.1550091794625192
+    },
+    {
+      "feature": "min_ramp_min",
+      "mean_abs_shap": 0.15135841642436457
+    },
+    {
+      "feature": "bw_roc_1min",
+      "mean_abs_shap": 0.14078742920684956
+    },
+    {
+      "feature": "mv_filler_flow",
+      "mean_abs_shap": 0.13071424210899538
+    },
+    {
+      "feature": "ash_change",
+      "mean_abs_shap": 0.1289144854872092
+    },
+    {
+      "feature": "post_ramp",
+      "mean_abs_shap": 0.12829520849881526
+    },
+    {
+      "feature": "mv_machine_speed_roc_1min",
+      "mean_abs_shap": 0.12559620525267834
+    },
+    {
+      "feature": "moisture_change",
+      "mean_abs_shap": 0.10686340756299297
+    },
+    {
+      "feature": "dv_headbox_consistency",
+      "mean_abs_shap": 0.10678697806892347
+    },
+    {
+      "feature": "bw_sp_roc_1min",
+      "mean_abs_shap": 0.10622638540764671
+    },
+    {
+      "feature": "dv_headbox_consistency_dev",
+      "mean_abs_shap": 0.10364974944358703
+    },
+    {
+      "feature": "bw_dev_projected_abs",
+      "mean_abs_shap": 0.10303004004063472
+    },
+    {
+      "feature": "stock_headroom",
+      "mean_abs_shap": 0.099494370127884
+    },
+    {
+      "feature": "mv_steam_pressure_remaining",
+      "mean_abs_shap": 0.09545678632324012
+    },
+    {
+      "feature": "dv_ambient_humidity",
+      "mean_abs_shap": 0.08925842315777505
+    },
+    {
+      "feature": "mv_machine_speed_remaining",
+      "mean_abs_shap": 0.08745494741597355
+    },
+    {
+      "feature": "mv_retention_aid",
+      "mean_abs_shap": 0.08644575360480886
+    },
+    {
+      "feature": "dv_white_water_freeness",
+      "mean_abs_shap": 0.07889573770260583
+    },
+    {
+      "feature": "bw_from",
+      "mean_abs_shap": 0.07255024275535704
+    },
+    {
+      "feature": "mv_stock_flow",
+      "mean_abs_shap": 0.07193678087008332
+    },
+    {
+      "feature": "dv_ambient_humidity_roc_2min",
+      "mean_abs_shap": 0.07123984491040257
+    },
+    {
+      "feature": "dv_ambient_humidity_dev",
+      "mean_abs_shap": 0.06977996635170124
+    },
+    {
+      "feature": "dv_broke_ratio",
+      "mean_abs_shap": 0.06621800193723851
+    },
+    {
+      "feature": "dv_press_load_dev",
+      "mean_abs_shap": 0.06567956094608125
+    },
+    {
+      "feature": "dv_broke_ratio_dev",
+      "mean_abs_shap": 0.0645714765866612
+    },
+    {
+      "feature": "mv_steam_pressure_remaining_frac",
+      "mean_abs_shap": 0.06240168490895517
+    },
+    {
+      "feature": "dv_press_load_roc_2min",
+      "mean_abs_shap": 0.060302198577695865
+    },
+    {
+      "feature": "dv_steam_header_kpa",
+      "mean_abs_shap": 0.059811228672502055
+    },
+    {
+      "feature": "bw_dev_pct",
+      "mean_abs_shap": 0.059206716008588574
+    },
+    {
+      "feature": "speed_change_pct",
+      "mean_abs_shap": 0.05916935516502655
+    },
+    {
+      "feature": "mv_machine_speed",
+      "mean_abs_shap": 0.058181471294871445
+    },
+    {
+      "feature": "caliper",
+      "mean_abs_shap": 0.05727255094256665
+    },
+    {
+      "feature": "mv_steam_pressure",
+      "mean_abs_shap": 0.057080348929157726
+    },
+    {
+      "feature": "currently_off_spec",
+      "mean_abs_shap": 0.05431210510977141
+    },
+    {
+      "feature": "dv_white_water_freeness_dev",
+      "mean_abs_shap": 0.05273063157849894
+    },
+    {
+      "feature": "dv_press_load",
+      "mean_abs_shap": 0.050805510826997455
+    },
+    {
+      "feature": "dv_steam_header_kpa_roc_2min",
+      "mean_abs_shap": 0.047944312302694136
+    },
+    {
+      "feature": "bw_dev_std_2min",
+      "mean_abs_shap": 0.04720942182612227
+    },
+    {
+      "feature": "bw_dev_mean_2min",
+      "mean_abs_shap": 0.045957492034380695
+    },
+    {
+      "feature": "steam_headroom_kpa",
+      "mean_abs_shap": 0.045061914233062696
+    },
+    {
+      "feature": "bw_dev_roc_0_5min",
+      "mean_abs_shap": 0.04481500790383924
+    },
+    {
+      "feature": "mv_steam_pressure_slew_util",
+      "mean_abs_shap": 0.04345603220492204
+    },
+    {
+      "feature": "dv_steam_header_kpa_dev",
+      "mean_abs_shap": 0.042969328647451885
+    },
+    {
+      "feature": "mv_filler_flow_remaining",
+      "mean_abs_shap": 0.042116428714534804
+    },
+    {
+      "feature": "dv_refiner_sec_dev",
+      "mean_abs_shap": 0.04085405405171369
+    },
+    {
+      "feature": "mv_filler_flow_remaining_frac",
+      "mean_abs_shap": 0.04008262302711699
+    },
+    {
+      "feature": "bw_to",
+      "mean_abs_shap": 0.03939086826672834
+    },
+    {
+      "feature": "dv_headbox_consistency_dev_norm",
+      "mean_abs_shap": 0.0389356311873949
+    },
+    {
+      "feature": "dv_wire_drainage_index_dev",
+      "mean_abs_shap": 0.03852607170229552
+    },
+    {
+      "feature": "dv_couch_vacuum_dev",
+      "mean_abs_shap": 0.038428481724909834
+    },
+    {
+      "feature": "dv_couch_vacuum",
+      "mean_abs_shap": 0.038247061000384705
+    },
+    {
+      "feature": "ramp_is_feasible",
+      "mean_abs_shap": 0.03804813741643709
+    },
+    {
+      "feature": "dv_white_water_freeness_roc_2min",
+      "mean_abs_shap": 0.037628489658554816
+    },
+    {
+      "feature": "dv_wire_drainage_index",
+      "mean_abs_shap": 0.03659301118659126
+    },
+    {
+      "feature": "dv_refiner_sec",
+      "mean_abs_shap": 0.03370851484316004
+    },
+    {
+      "feature": "dv_broke_ratio_roc_2min",
+      "mean_abs_shap": 0.03281596130234492
+    },
+    {
+      "feature": "dv_wire_drainage_index_roc_2min",
+      "mean_abs_shap": 0.031724696292364477
+    },
+    {
+      "feature": "ash_dev",
+      "mean_abs_shap": 0.027613354040198927
+    },
+    {
+      "feature": "mv_steam_pressure_roc_1min",
+      "mean_abs_shap": 0.02759476432118205
+    },
+    {
+      "feature": "bw_dev_roc_2min",
+      "mean_abs_shap": 0.025633748468626753
+    },
+    {
+      "feature": "mv_filler_flow_slew_util",
+      "mean_abs_shap": 0.025219132283305655
+    },
+    {
+      "feature": "mv_filler_flow_roc_1min",
+      "mean_abs_shap": 0.023473720588398753
+    },
+    {
+      "feature": "mv_retention_aid_roc_1min",
+      "mean_abs_shap": 0.02222638595946577
+    },
+    {
+      "feature": "dv_press_load_dev_norm",
+      "mean_abs_shap": 0.018100926908886004
+    },
+    {
+      "feature": "dv_wire_drainage_index_dev_norm",
+      "mean_abs_shap": 0.018086693346841383
+    },
+    {
+      "feature": "dv_ambient_humidity_dev_norm",
+      "mean_abs_shap": 0.017862227257046566
+    },
+    {
+      "feature": "dv_steam_header_kpa_dev_norm",
+      "mean_abs_shap": 0.01734458777101631
+    },
+    {
+      "feature": "dv_couch_vacuum_roc_2min",
+      "mean_abs_shap": 0.01697453899015272
+    },
+    {
+      "feature": "dv_broke_ratio_dev_norm",
+      "mean_abs_shap": 0.016775046341725247
+    },
+    {
+      "feature": "moisture_roc_1min",
+      "mean_abs_shap": 0.015630223922681843
+    },
+    {
+      "feature": "dv_couch_vacuum_dev_norm",
+      "mean_abs_shap": 0.014873118561496458
+    },
+    {
+      "feature": "dv_white_water_freeness_dev_norm",
+      "mean_abs_shap": 0.014604907902560471
+    },
+    {
+      "feature": "mv_stock_flow_roc_1min",
+      "mean_abs_shap": 0.014444539031523134
+    },
+    {
+      "feature": "dv_refiner_sec_roc_2min",
+      "mean_abs_shap": 0.014036608418839582
+    },
+    {
+      "feature": "ash_roc_1min",
+      "mean_abs_shap": 0.013863645408376563
+    },
+    {
+      "feature": "moisture_dev",
+      "mean_abs_shap": 0.013837434636266611
+    },
+    {
+      "feature": "mv_retention_aid_slew_util",
+      "mean_abs_shap": 0.012468239166098696
+    },
+    {
+      "feature": "bw_dev_projected",
+      "mean_abs_shap": 0.01219858739234093
+    },
+    {
+      "feature": "dv_refiner_sec_dev_norm",
+      "mean_abs_shap": 0.011431752557781078
+    },
+    {
+      "feature": "bw_dev_roc_1min",
+      "mean_abs_shap": 0.009236598606705674
+    },
+    {
+      "feature": "in_ramp",
+      "mean_abs_shap": 0.0049637299075847045
+    },
+    {
+      "feature": "steam_saturated",
+      "mean_abs_shap": 0.0016254833545689363
+    },
+    {
+      "feature": "speed_at_limit",
+      "mean_abs_shap": 0.0004876457645909063
+    },
+    {
+      "feature": "projected_breach",
+      "mean_abs_shap": 0.0004563569566943232
+    },
+    {
+      "feature": "mv_jet_wire_ratio_slew_util",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "mv_jet_wire_ratio_roc_1min",
+      "mean_abs_shap": 0.0
+    },
+    {
+      "feature": "mv_jet_wire_ratio",
+      "mean_abs_shap": 0.0
+    }
+  ],
+  "examples": [
+    {
+      "row": 0,
+      "top_contributions": [
+        {
+          "feature": "bw_dev_headroom_pct",
+          "shap_value": 3.438908308500703,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "bw_abs_dev_pct",
+          "shap_value": 2.0835734145500444,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "mv_machine_speed_remaining_frac",
+          "shap_value": 1.7524272687942661,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "t_since_ramp_min",
+          "shap_value": 1.5037543475215571,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "bw_dev_max_2min",
+          "shap_value": 1.0886035292745604,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "mv_machine_speed_slew_util",
+          "shap_value": 0.9777450427295755,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "mv_machine_speed_roc_1min",
+          "shap_value": 0.9729480007260454,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "mv_stock_flow_slew_util",
+          "shap_value": 0.9049447725016895,
+          "direction": "increases risk"
+        }
+      ]
+    },
+    {
+      "row": 149,
+      "top_contributions": [
+        {
+          "feature": "t_since_ramp_min",
+          "shap_value": 1.6549140978011785,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "dv_headbox_consistency_dev",
+          "shap_value": 1.273940344212572,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "dv_headbox_consistency",
+          "shap_value": 1.0756520797255902,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_ramp_min",
+          "shap_value": 0.829173556567404,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_lead_scale",
+          "shap_value": -0.7460382060727375,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "mv_machine_speed_slew_util",
+          "shap_value": 0.5218741983895705,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_tau_c_scale",
+          "shap_value": 0.44158723564491364,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "bw_dev_headroom_pct",
+          "shap_value": -0.4241232712904422,
+          "direction": "reduces risk"
+        }
+      ]
+    },
+    {
+      "row": 299,
+      "top_contributions": [
+        {
+          "feature": "bw_dev_headroom_pct",
+          "shap_value": 4.1103274411480735,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_trim_enabled",
+          "shap_value": 3.659668377622208,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "bw_abs_dev_pct",
+          "shap_value": 2.609121628611858,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "t_since_ramp_min",
+          "shap_value": 1.1879406904341419,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "bw_dev_max_2min",
+          "shap_value": 0.7282457645035103,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_lead_scale",
+          "shap_value": 0.6853308129556192,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "ramp_progress",
+          "shap_value": 0.542260185678501,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "mv_machine_speed_slew_util",
+          "shap_value": 0.3572257181602964,
+          "direction": "increases risk"
+        }
+      ]
+    },
+    {
+      "row": 449,
+      "top_contributions": [
+        {
+          "feature": "t_since_ramp_min",
+          "shap_value": 1.9136018421033973,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "mv_stock_flow_remaining_frac",
+          "shap_value": 0.6054639419998653,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "ramp_progress",
+          "shap_value": 0.486962166726807,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_ramp_min",
+          "shap_value": -0.4717676212223651,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "mv_machine_speed_remaining_frac",
+          "shap_value": 0.46803724446287204,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "bw_dev_headroom_pct",
+          "shap_value": -0.4538869327733449,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "mv_machine_speed_remaining",
+          "shap_value": 0.4456927945088596,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "bw_abs_dev_pct",
+          "shap_value": -0.3877098970445749,
+          "direction": "reduces risk"
+        }
+      ]
+    },
+    {
+      "row": 599,
+      "top_contributions": [
+        {
+          "feature": "t_since_ramp_min",
+          "shap_value": 1.7010209639504377,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_tau_c_scale",
+          "shap_value": -1.270672701818741,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "transition_magnitude",
+          "shap_value": -0.6273426520057745,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "bw_dev_headroom_pct",
+          "shap_value": -0.5586012367872287,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "bw_abs_dev_pct",
+          "shap_value": -0.5056542128723959,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "ramp_progress",
+          "shap_value": 0.48591823844080523,
+          "direction": "increases risk"
+        },
+        {
+          "feature": "plan_lead_scale",
+          "shap_value": -0.4817877689471768,
+          "direction": "reduces risk"
+        },
+        {
+          "feature": "ramp_deficit_min",
+          "shap_value": -0.3958383591058797,
+          "direction": "reduces risk"
+        }
+      ]
+    }
+  ]
+}

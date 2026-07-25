@@ -1,0 +1,18 @@
+# Generated corpus — fully seed-determined, rebuild with scripts/generate_data.py
+data/
+
+# Trained artefacts — rebuild with scripts/train_risk_model.py
+models/checkpoints/
+models/*.joblib
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

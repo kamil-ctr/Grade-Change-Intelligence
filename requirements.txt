@@ -1,0 +1,17 @@
+# Grade Change Intelligence -- runtime dependencies
+#
+# Phase 0 needs only numpy and pandas. Later phases add scikit-learn (risk
+# model) and FastAPI (service layer). Pinned to lower bounds rather than exact
+# versions so the project installs cleanly on a judge's machine.
+
+numpy>=1.24
+pandas>=2.0
+
+# Phase 1
+scikit-learn>=1.3
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.6
+
+# Optional: faster feature persistence (falls back to gzipped CSV if absent)
+# pyarrow>=15.0
