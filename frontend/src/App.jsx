@@ -78,7 +78,7 @@ export default function App() {
             </select>
           </div>
           <div className="field">
-            <label>Clock: t = {tMin.toFixed(1)} min</label>
+            <label>Clock: t = {tMin.toFixed(2)} min</label>
             <input type="range" min="0" max="29" step="0.5" value={tMin} onChange={(e) => setTMin(Number(e.target.value))} />
           </div>
         </div>
@@ -99,14 +99,14 @@ export default function App() {
             <div className="stat-row" style={{ marginBottom: 12 }}>
               <div className="stat-tile">
                 <div className={`value ${Math.abs(live.basis_weight_dev_pct) > 2.5 ? 'critical' : 'good'}`}>
-                  {live.basis_weight_dev_pct.toFixed(2)}%
+                  {live.basis_weight_dev_pct.toFixed(1)}%
                 </div>
                 <div className="label">Current deviation</div>
               </div>
               {live.risk_probability !== undefined && (
                 <div className="stat-tile">
                   <span className={`risk-alarm ${live.risk_alarm ? 'critical' : 'good'}`}>
-                    {live.risk_alarm ? 'BREACH RISK' : 'in spec'} &middot; {(live.risk_probability * 100).toFixed(0)}%
+                    {live.risk_alarm ? 'BREACH RISK' : 'in spec'} &middot; {(live.risk_probability * 100).toFixed(1)}%
                   </span>
                   <div className="label" style={{ marginTop: 6 }}>P(breach within 10 min)</div>
                 </div>

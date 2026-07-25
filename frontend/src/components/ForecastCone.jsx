@@ -13,7 +13,15 @@ function scaleY(yMin, yMax) {
 }
 
 export default function ForecastCone({ live }) {
-  if (!live) return null
+  if (!live) {
+    return (
+      <div>
+        <div className="skeleton-line long" />
+        <div className="skeleton-line medium" />
+        <div className="skeleton-line short" />
+      </div>
+    )
+  }
   const cone = live.forecast_cone
   const now = live.basis_weight_dev_pct ?? 0
 
