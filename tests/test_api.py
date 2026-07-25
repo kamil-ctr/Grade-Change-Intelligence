@@ -97,14 +97,26 @@ class TestGCIService(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.service.feedback("nonexistent", "maybe")
 
-    def test_correlations_returns_list_of_dicts(self):
-        results = self.service.correlations(max_events=8, max_lag_min=1.0, min_abs_correlation=0.3)
-        self.assertIsInstance(results, list)
-        if results:
-            self.assertIn("cause", results[0])
-            self.assertIn("novel", results[0])
+    def test_correlations_computation_returns_list_of_dicts(self):
+        # Exercises the actual computation directly rather than through the
+        # cache, since `correlations()` never computes inline (see below) --
+        # it only ever returns whatever the background warm has produced.
+        results = self.service._compute_correlations(max_events=8, max_lag_min=1.0, min_abs_correlation=0.3)
+        dicts = [r.to_dict() for r in results]
+        self.assertIsInstance(dicts, list)
+        if dicts:
+            self.assertIn("cause", dicts[0])
+            self.assertIn("novel", dicts[0])
 
-    def test_correlations_cached_after_first_call(self):
+    def test_correlations_never_blocks_and_reads_the_cache(self):
+        # `correlations()` must never trigger a computation itself -- it only
+        # reflects whatever the background warm thread has set. An empty
+        # cache reads as an empty list; a populated cache is returned as-is.
+        self.service._correlations_cache = None
+        self.assertEqual(self.service.correlations(), [])
+
+        sentinel = [{"cause": "a", "effect": "b"}]
+        self.service._correlations_cache = sentinel
         first = self.service.correlations()
         second = self.service.correlations()
         self.assertIs(first, second)

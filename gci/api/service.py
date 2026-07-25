@@ -15,6 +15,7 @@ on the trained artefacts at all, so they keep working regardless.
 from __future__ import annotations
 
 import dataclasses
+import threading
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -75,6 +76,21 @@ class GCIService:
 
         self.datasource: DataSource = datasource or SimulatedDataSource()
         self._load_models()
+
+        # Correlation discovery sweeps ~340 tag pairs x dozens of lags; on a
+        # resource-constrained host (e.g. a free-tier deploy with a fraction
+        # of a CPU core) that can take well over a minute -- long enough to
+        # time out a live request. Warm it in the background instead: the
+        # server becomes responsive immediately, `/api/correlations` returns
+        # an empty list until the first sweep finishes, then the cached
+        # result thereafter. Never recomputed inline by a request thread.
+        threading.Thread(target=self._warm_correlations_cache, daemon=True).start()
+
+    def _warm_correlations_cache(self) -> None:
+        try:
+            self._correlations_cache = [r.to_dict() for r in self._compute_correlations()]
+        except Exception:
+            self._correlations_cache = []
 
     def _load_models(self) -> None:
         try:
@@ -214,28 +230,35 @@ class GCIService:
         return self.ledger.evaluate()
 
     # -- correlations / stabilization ---------------------------------------
-    def correlations(
+    def _compute_correlations(
         self, max_events: int = 200, max_lag_min: float = 3.0,
         min_abs_correlation: float = 0.35,
-    ) -> List[dict]:
-        if self._correlations_cache is None:
-            try:
-                cube, tags, meta = load_dataset(self.data_dir)
-                series = series_by_tag_from_dataset(
-                    cube, tags, meta, max_events=max_events, seed=1,
-                )
-            except Exception:
-                # No persisted corpus on disk (a clean checkout that hasn't
-                # run generate_data.py yet) -- fall back to the always-present
-                # demo events rather than failing the endpoint.
-                series = series_by_tag_from_events(
-                    list(self.datasource.events.values())  # type: ignore[attr-defined]
-                )
-            results = discover_correlations(
-                series, max_lag_min=max_lag_min, min_abs_correlation=min_abs_correlation,
+    ):
+        try:
+            cube, tags, meta = load_dataset(self.data_dir)
+            series = series_by_tag_from_dataset(
+                cube, tags, meta, max_events=max_events, seed=1,
             )
-            self._correlations_cache = [r.to_dict() for r in results]
-        return self._correlations_cache
+        except Exception:
+            # No persisted corpus on disk (a clean checkout that hasn't
+            # run generate_data.py yet) -- fall back to the always-present
+            # demo events rather than failing the endpoint.
+            series = series_by_tag_from_events(
+                list(self.datasource.events.values())  # type: ignore[attr-defined]
+            )
+        return discover_correlations(
+            series, max_lag_min=max_lag_min, min_abs_correlation=min_abs_correlation,
+        )
+
+    def correlations(self) -> List[dict]:
+        """
+        Never computes inline -- always returns whatever the background warm
+        (kicked off at startup, see `__init__`) has produced so far: an empty
+        list before it finishes, the real result after. A request thread
+        must never pay for a sweep that can take over a minute on a
+        constrained host.
+        """
+        return self._correlations_cache or []
 
     def stabilization(self, event_id: int) -> List[dict]:
         ev = self.datasource.get_event(event_id)
