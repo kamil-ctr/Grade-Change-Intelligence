@@ -11,6 +11,10 @@ __pycache__/
 .venv/
 venv/
 *.egg-info/
+.ipynb_checkpoints/
+
+# Secrets
+.env
 
 # OS / editor
 .DS_Store
