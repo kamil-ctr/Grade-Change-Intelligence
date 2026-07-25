@@ -1,5 +1,14 @@
 export default function CorrelationTable({ correlations }) {
-  if (!correlations || correlations.length === 0) {
+  if (correlations === null) {
+    return (
+      <div>
+        <div className="skeleton-line long" />
+        <div className="skeleton-line medium" />
+        <div className="skeleton-line long" />
+      </div>
+    )
+  }
+  if (correlations.length === 0) {
     return <div className="empty-state">No correlations above threshold in this sample.</div>
   }
   const top = correlations.slice(0, 10)
