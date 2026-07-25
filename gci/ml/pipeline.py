@@ -599,16 +599,17 @@ class RiskModelPipeline:
 
     # -- explanation -------------------------------------------------------
     def explain_best(
-        self, n_repeats: int = 5, shap_max_rows: int = 600
+        self, n_repeats: int = 8, shap_max_rows: int = 3000
     ) -> "RiskModelPipeline":
         """
         Explain the selected model.
 
-        `shap_max_rows` is deliberately modest. Exact TreeSHAP on a bagged
-        forest costs O(trees x leaves x features) per row, so a few thousand
-        rows is minutes of compute -- while a few hundred is already ample for
-        stable mean |SHAP| rankings, which is what the global attribution needs.
-        Local explanations are computed on demand at serving time, not here.
+        On real hardware (no per-call wall-clock cap), `shap_max_rows` and
+        `perm_max_rows` are set generously: exact TreeSHAP on a bagged forest
+        costs O(trees x leaves x features) per row, but a few thousand rows
+        is still low-minutes of compute and gives materially more stable mean
+        |SHAP| rankings than a few hundred. Local explanations are computed on
+        demand at serving time, not here.
         """
         if self.best is None:
             raise RuntimeError("call fit_all() before explain_best()")
@@ -623,7 +624,7 @@ class RiskModelPipeline:
         self._log("Computing consensus feature importance ...")
         self.importance = explain_mod.combined_importance(
             self.best.estimator, X_val, y_val, self.shap, n_repeats=n_repeats,
-            perm_max_rows=1500,
+            perm_max_rows=6000,
         )
         top = self.importance.head(8)["feature"].tolist()
         self._log(f"  top features: {', '.join(top)}")

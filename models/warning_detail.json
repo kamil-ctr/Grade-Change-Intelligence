@@ -1,7 +1,7 @@
 {
   "validation": [
     {
-      "event_id": 4,
+      "event_id": 1,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -10,75 +10,75 @@
       "false_alarm": false
     },
     {
-      "event_id": 5,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.833333253860474,
-      "breach_min": 7.0,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
       "event_id": 7,
       "breached": true,
       "warned": true,
-      "warning_min": 3.3333334922790527,
+      "warning_min": 0.9166669845581055,
       "breach_min": 5.833333492279053,
-      "alarm_min": 2.5,
+      "alarm_min": 4.916666507720947,
       "false_alarm": false
     },
     {
       "event_id": 10,
       "breached": true,
       "warned": true,
-      "warning_min": 4.249999761581421,
+      "warning_min": 4.416666507720947,
       "breach_min": 6.416666507720947,
-      "alarm_min": 2.1666667461395264,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 13,
+      "event_id": 16,
       "breached": true,
       "warned": true,
-      "warning_min": 6.250000238418579,
-      "breach_min": 8.416666984558105,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 4.333333492279053,
+      "breach_min": 6.333333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 15,
+      "event_id": 17,
       "breached": true,
       "warned": true,
-      "warning_min": 5.249999761581421,
-      "breach_min": 7.416666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 7.1666669845581055,
+      "breach_min": 9.166666984558105,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 22,
+      "event_id": 23,
       "breached": true,
+      "warned": true,
+      "warning_min": 1.4166667461395264,
+      "breach_min": 3.4166667461395264,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 25,
+      "breached": false,
       "warned": false,
       "warning_min": NaN,
-      "breach_min": 7.916666507720947,
+      "breach_min": NaN,
       "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 27,
+      "event_id": 26,
       "breached": true,
       "warned": true,
-      "warning_min": 1.8333334922790527,
-      "breach_min": 6.833333492279053,
-      "alarm_min": 5.0,
+      "warning_min": 2.3333334922790527,
+      "breach_min": 4.333333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 29,
+      "event_id": 32,
       "breached": true,
       "warned": true,
-      "warning_min": 2.999999761581421,
-      "breach_min": 5.166666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 1.5833332538604736,
+      "breach_min": 3.5833332538604736,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
@@ -87,29 +87,20 @@
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
-      "alarm_min": 4.583333492279053,
-      "false_alarm": true
-    },
-    {
-      "event_id": 40,
-      "breached": true,
-      "warned": true,
-      "warning_min": 3.5833332538604736,
-      "breach_min": 6.666666507720947,
-      "alarm_min": 3.0833332538604736,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 42,
+      "event_id": 36,
       "breached": true,
-      "warned": true,
-      "warning_min": 2.749999761581421,
-      "breach_min": 4.916666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 23.33333396911621,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 44,
+      "event_id": 60,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -118,129 +109,48 @@
       "false_alarm": false
     },
     {
-      "event_id": 45,
+      "event_id": 88,
       "breached": true,
       "warned": true,
-      "warning_min": 3.8333332538604736,
-      "breach_min": 6.0,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.75,
+      "breach_min": 7.75,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 53,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 9.416666984558105,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 55,
+      "event_id": 90,
       "breached": true,
       "warned": true,
-      "warning_min": 8.083333253860474,
-      "breach_min": 10.25,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.6666669845581055,
+      "breach_min": 12.166666984558105,
+      "alarm_min": 6.5,
       "false_alarm": false
     },
     {
-      "event_id": 66,
+      "event_id": 100,
       "breached": true,
       "warned": true,
-      "warning_min": 3.6666667461395264,
-      "breach_min": 5.833333492279053,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 11.250000238418579,
+      "breach_min": 14.666666984558105,
+      "alarm_min": 3.4166667461395264,
       "false_alarm": false
     },
     {
-      "event_id": 67,
+      "event_id": 104,
       "breached": true,
       "warned": true,
-      "warning_min": 6.000000238418579,
-      "breach_min": 8.166666984558105,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 69,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 80,
-      "breached": true,
-      "warned": true,
-      "warning_min": 5.499999761581421,
-      "breach_min": 7.666666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 82,
-      "breached": true,
-      "warned": true,
-      "warning_min": 2.5833332538604736,
-      "breach_min": 4.75,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 108,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 110,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": true
-    },
-    {
-      "event_id": 112,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 113,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
+      "warning_min": 6.25,
+      "breach_min": 8.25,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 115,
       "breached": true,
       "warned": true,
-      "warning_min": 4.416666746139526,
+      "warning_min": 4.583333492279053,
       "breach_min": 6.583333492279053,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 116,
-      "breached": true,
-      "warned": true,
-      "warning_min": 7.583333253860474,
-      "breach_min": 9.75,
-      "alarm_min": 2.1666667461395264,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
@@ -249,6 +159,24 @@
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 122,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.5833330154418945,
+      "breach_min": 8.583333015441895,
+      "alarm_min": 6.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 126,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 5.0,
       "alarm_min": NaN,
       "false_alarm": false
     },
@@ -262,16 +190,16 @@
       "false_alarm": false
     },
     {
-      "event_id": 138,
+      "event_id": 132,
       "breached": true,
       "warned": true,
-      "warning_min": 2.249999761581421,
-      "breach_min": 4.416666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 6.25,
+      "breach_min": 8.25,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 140,
+      "event_id": 135,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -280,7 +208,7 @@
       "false_alarm": false
     },
     {
-      "event_id": 144,
+      "event_id": 149,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -289,7 +217,7 @@
       "false_alarm": false
     },
     {
-      "event_id": 158,
+      "event_id": 154,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -298,43 +226,34 @@
       "false_alarm": false
     },
     {
-      "event_id": 163,
+      "event_id": 157,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
+      "alarm_min": 16.75,
+      "false_alarm": true
+    },
+    {
+      "event_id": 160,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 8.583333015441895,
       "alarm_min": NaN,
       "false_alarm": false
     },
     {
       "event_id": 167,
       "breached": true,
-      "warned": false,
-      "warning_min": NaN,
+      "warned": true,
+      "warning_min": 0.16666698455810547,
       "breach_min": 6.833333492279053,
-      "alarm_min": NaN,
+      "alarm_min": 6.666666507720947,
       "false_alarm": false
     },
     {
-      "event_id": 170,
-      "breached": true,
-      "warned": true,
-      "warning_min": 0.41666650772094727,
-      "breach_min": 2.5833332538604736,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 176,
-      "breached": true,
-      "warned": true,
-      "warning_min": 7.750000238418579,
-      "breach_min": 9.916666984558105,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 193,
+      "event_id": 168,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -343,12 +262,66 @@
       "false_alarm": false
     },
     {
-      "event_id": 194,
+      "event_id": 173,
       "breached": true,
       "warned": true,
-      "warning_min": 2.9166667461395264,
-      "breach_min": 5.083333492279053,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 3.1666665077209473,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 182,
+      "breached": true,
+      "warned": true,
+      "warning_min": 1.3333334922790527,
+      "breach_min": 3.4166667461395264,
+      "alarm_min": 2.0833332538604736,
+      "false_alarm": false
+    },
+    {
+      "event_id": 187,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 190,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.0,
+      "breach_min": 5.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 192,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 195,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 5.166666507720947,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 196,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.5,
+      "breach_min": 8.833333015441895,
+      "alarm_min": 8.333333015441895,
       "false_alarm": false
     },
     {
@@ -361,43 +334,61 @@
       "false_alarm": false
     },
     {
-      "event_id": 210,
-      "breached": true,
-      "warned": true,
-      "warning_min": 3.6666665077209473,
-      "breach_min": 10.833333015441895,
-      "alarm_min": 7.166666507720947,
+      "event_id": 207,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 218,
+      "event_id": 211,
       "breached": true,
       "warned": true,
-      "warning_min": 4.833333253860474,
-      "breach_min": 7.0,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 4.083333492279053,
+      "breach_min": 6.083333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 222,
+      "event_id": 215,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 219,
       "breached": true,
       "warned": true,
-      "warning_min": 0.33333301544189453,
-      "breach_min": 8.5,
-      "alarm_min": 8.166666984558105,
+      "warning_min": 4.916666507720947,
+      "breach_min": 6.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 225,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 16.41666603088379,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
       "event_id": 226,
       "breached": true,
-      "warned": true,
-      "warning_min": 6.916666507720947,
+      "warned": false,
+      "warning_min": NaN,
       "breach_min": 12.583333015441895,
-      "alarm_min": 5.666666507720947,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 232,
+      "event_id": 227,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -406,106 +397,160 @@
       "false_alarm": false
     },
     {
-      "event_id": 237,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 248,
+      "event_id": 243,
       "breached": true,
       "warned": true,
-      "warning_min": 3.5833332538604736,
-      "breach_min": 5.75,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.166666507720947,
+      "breach_min": 7.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 246,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 247,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
       "event_id": 250,
-      "breached": true,
-      "warned": true,
-      "warning_min": 9.583333253860474,
-      "breach_min": 11.75,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 253,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.499999761581421,
-      "breach_min": 6.666666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 254,
-      "breached": true,
-      "warned": true,
-      "warning_min": 0.75,
-      "breach_min": 6.416666507720947,
-      "alarm_min": 5.666666507720947,
-      "false_alarm": false
-    },
-    {
-      "event_id": 256,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
       "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 256,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.16666650772094727,
+      "breach_min": 5.0,
+      "alarm_min": 4.833333492279053,
+      "false_alarm": false
+    },
+    {
+      "event_id": 257,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 259,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.5,
+      "breach_min": 6.5,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 262,
       "breached": true,
       "warned": true,
-      "warning_min": 0.08333349227905273,
-      "breach_min": 5.75,
-      "alarm_min": 5.666666507720947,
+      "warning_min": 3.0833334922790527,
+      "breach_min": 5.083333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
+    },
+    {
+      "event_id": 263,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 7.083333492279053,
+      "false_alarm": true
     },
     {
       "event_id": 269,
       "breached": true,
       "warned": false,
       "warning_min": NaN,
-      "breach_min": 16.25,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 270,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 12.333333015441895,
+      "breach_min": 7.75,
       "alarm_min": NaN,
       "false_alarm": false
     },
     {
       "event_id": 271,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 5.083333492279053,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 273,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
-      "alarm_min": 3.3333332538604736,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 278,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 293,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 294,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.166666746139526,
+      "breach_min": 6.25,
+      "alarm_min": 2.0833332538604736,
+      "false_alarm": false
+    },
+    {
+      "event_id": 301,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.0833330154418945,
+      "breach_min": 8.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 302,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 4.0,
       "false_alarm": true
     },
     {
-      "event_id": 280,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.499999761581421,
-      "breach_min": 6.666666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 288,
+      "event_id": 319,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -514,196 +559,106 @@
       "false_alarm": false
     },
     {
-      "event_id": 290,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": true
-    },
-    {
-      "event_id": 292,
+      "event_id": 321,
       "breached": true,
       "warned": false,
       "warning_min": NaN,
-      "breach_min": 25.41666603088379,
+      "breach_min": 8.083333015441895,
       "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 299,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 303,
+      "event_id": 329,
       "breached": true,
       "warned": true,
-      "warning_min": 0.5833334922790527,
-      "breach_min": 7.583333492279053,
-      "alarm_min": 7.0,
-      "false_alarm": false
-    },
-    {
-      "event_id": 307,
-      "breached": true,
-      "warned": true,
-      "warning_min": 9.333333969116211,
-      "breach_min": 16.08333396911621,
-      "alarm_min": 6.75,
-      "false_alarm": false
-    },
-    {
-      "event_id": 314,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 322,
-      "breached": true,
-      "warned": true,
-      "warning_min": 3.5833332538604736,
-      "breach_min": 5.75,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.083333253860474,
+      "breach_min": 7.166666507720947,
+      "alarm_min": 2.0833332538604736,
       "false_alarm": false
     },
     {
       "event_id": 332,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": true
-    },
-    {
-      "event_id": 347,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 356,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 359,
       "breached": true,
       "warned": true,
-      "warning_min": 0.08333349227905273,
-      "breach_min": 4.75,
-      "alarm_min": 4.666666507720947,
+      "warning_min": 7.0833330154418945,
+      "breach_min": 9.083333015441895,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 361,
+      "event_id": 341,
       "breached": true,
       "warned": true,
-      "warning_min": 5.749999761581421,
-      "breach_min": 7.916666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 2.8333334922790527,
+      "breach_min": 4.833333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 364,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 365,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 372,
       "breached": true,
       "warned": true,
-      "warning_min": 7.750000238418579,
-      "breach_min": 9.916666984558105,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.5,
+      "breach_min": 7.5,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 377,
+      "event_id": 368,
       "breached": true,
       "warned": true,
-      "warning_min": 7.916666269302368,
-      "breach_min": 11.833333015441895,
-      "alarm_min": 3.9166667461395264,
+      "warning_min": 3.0833334922790527,
+      "breach_min": 5.083333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 382,
+      "event_id": 371,
       "breached": true,
       "warned": true,
-      "warning_min": 5.749999761581421,
-      "breach_min": 7.916666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 390,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 393,
+      "event_id": 376,
       "breached": true,
       "warned": true,
-      "warning_min": 23.416667222976685,
-      "breach_min": 27.33333396911621,
-      "alarm_min": 3.9166667461395264,
+      "warning_min": 5.166666507720947,
+      "breach_min": 7.166666507720947,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 397,
+      "event_id": 378,
       "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 10.166666984558105,
-      "alarm_min": NaN,
+      "warned": true,
+      "warning_min": 4.416666507720947,
+      "breach_min": 6.416666507720947,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 405,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
+      "event_id": 379,
+      "breached": true,
+      "warned": true,
+      "warning_min": 9.583333015441895,
+      "breach_min": 12.083333015441895,
+      "alarm_min": 2.5,
       "false_alarm": false
     },
     {
-      "event_id": 409,
+      "event_id": 394,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.083333492279053,
+      "breach_min": 7.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 395,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -713,11 +668,11 @@
     },
     {
       "event_id": 410,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
+      "breached": true,
+      "warned": true,
+      "warning_min": 11.25,
+      "breach_min": 13.25,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
@@ -730,88 +685,61 @@
       "false_alarm": false
     },
     {
-      "event_id": 415,
+      "event_id": 419,
       "breached": true,
       "warned": true,
-      "warning_min": 12.916666269302368,
-      "breach_min": 15.083333015441895,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 7.4166669845581055,
+      "breach_min": 9.416666984558105,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 423,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 432,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 433,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 26.83333396911621,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 434,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 435,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 437,
+      "event_id": 420,
       "breached": true,
       "warned": true,
-      "warning_min": 2.749999761581421,
-      "breach_min": 4.916666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 4.333333492279053,
+      "breach_min": 6.333333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 441,
+      "event_id": 431,
       "breached": true,
       "warned": true,
-      "warning_min": 4.333333253860474,
+      "warning_min": 0.41666603088378906,
+      "breach_min": 9.083333015441895,
+      "alarm_min": 8.666666984558105,
+      "false_alarm": false
+    },
+    {
+      "event_id": 447,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.166666507720947,
       "breach_min": 7.166666507720947,
-      "alarm_min": 2.8333332538604736,
-      "false_alarm": false
-    },
-    {
-      "event_id": 444,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.249999761581421,
-      "breach_min": 6.416666507720947,
-      "alarm_min": 2.1666667461395264,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 448,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 450,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 453,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -829,81 +757,52 @@
       "false_alarm": false
     },
     {
-      "event_id": 467,
+      "event_id": 462,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 5.083333492279053,
+      "false_alarm": true
+    },
+    {
+      "event_id": 463,
       "breached": true,
       "warned": true,
-      "warning_min": 5.416666746139526,
-      "breach_min": 7.583333492279053,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 4.833333492279053,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 469,
+      "event_id": 464,
       "breached": true,
-      "warned": true,
-      "warning_min": 3.0833332538604736,
-      "breach_min": 5.25,
-      "alarm_min": 2.1666667461395264,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 22.83333396911621,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 472,
+      "event_id": 465,
       "breached": true,
       "warned": true,
-      "warning_min": 6.083333253860474,
-      "breach_min": 8.25,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 0.5833332538604736,
+      "breach_min": 3.3333332538604736,
+      "alarm_min": 2.75,
       "false_alarm": false
     },
     {
       "event_id": 473,
       "breached": true,
       "warned": true,
-      "warning_min": 6.250000238418579,
-      "breach_min": 8.416666984558105,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 9.166666984558105,
+      "breach_min": 11.166666984558105,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 491,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 17.16666603088379,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 499,
-      "breached": true,
-      "warned": true,
-      "warning_min": 5.249999761581421,
-      "breach_min": 7.416666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    }
-  ],
-  "test": [
-    {
-      "event_id": 0,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.166666746139526,
-      "breach_min": 6.333333492279053,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 2,
-      "breached": true,
-      "warned": true,
-      "warning_min": 6.333333253860474,
-      "breach_min": 8.5,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 6,
+      "event_id": 475,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -912,21 +811,1904 @@
       "false_alarm": false
     },
     {
-      "event_id": 11,
+      "event_id": 478,
       "breached": true,
       "warned": true,
-      "warning_min": 7.500000238418579,
-      "breach_min": 9.916666984558105,
-      "alarm_min": 2.4166667461395264,
+      "warning_min": 5.75,
+      "breach_min": 7.75,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 12,
+      "event_id": 490,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 491,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 11.166666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 494,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 12.25,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 496,
       "breached": true,
       "warned": true,
-      "warning_min": 8.333333253860474,
-      "breach_min": 10.5,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 7.4166669845581055,
+      "breach_min": 9.416666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 498,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.08333349227905273,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 6.75,
+      "false_alarm": false
+    },
+    {
+      "event_id": 499,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.1666665077209473,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 501,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.9166665077209473,
+      "breach_min": 5.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 505,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.75,
+      "breach_min": 8.25,
+      "alarm_min": 4.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 507,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 511,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 517,
+      "breached": true,
+      "warned": true,
+      "warning_min": 18.583332777023315,
+      "breach_min": 21.41666603088379,
+      "alarm_min": 2.8333332538604736,
+      "false_alarm": false
+    },
+    {
+      "event_id": 521,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 2.1666667461395264,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 531,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.75,
+      "breach_min": 7.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 540,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 541,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 550,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.166666030883789,
+      "breach_min": 14.083333015441895,
+      "alarm_min": 8.916666984558105,
+      "false_alarm": false
+    },
+    {
+      "event_id": 551,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 562,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 569,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 28.66666603088379,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 575,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 584,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.41666698455810547,
+      "breach_min": 10.0,
+      "alarm_min": 9.583333015441895,
+      "false_alarm": false
+    },
+    {
+      "event_id": 586,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.5,
+      "breach_min": 6.25,
+      "alarm_min": 2.75,
+      "false_alarm": false
+    },
+    {
+      "event_id": 593,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 13.083333015441895,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 594,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 597,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 18.08333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 606,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 5.666666507720947,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 608,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 610,
+      "breached": true,
+      "warned": true,
+      "warning_min": 13.25,
+      "breach_min": 15.5,
+      "alarm_min": 2.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 619,
+      "breached": true,
+      "warned": true,
+      "warning_min": 10.083333015441895,
+      "breach_min": 12.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 632,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 637,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.9166669845581055,
+      "breach_min": 8.916666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 639,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 643,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.583333492279053,
+      "breach_min": 6.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 649,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.583333492279053,
+      "breach_min": 7.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 651,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 656,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 9.833333015441895,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 664,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 668,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.083333492279053,
+      "breach_min": 6.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 671,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.3333334922790527,
+      "breach_min": 5.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 675,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.333333492279053,
+      "breach_min": 7.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 678,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 681,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.25,
+      "breach_min": 7.25,
+      "alarm_min": 7.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 686,
+      "breached": true,
+      "warned": true,
+      "warning_min": 1.25,
+      "breach_min": 7.5,
+      "alarm_min": 6.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 694,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 698,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 18.83333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 702,
+      "breached": true,
+      "warned": true,
+      "warning_min": 11.5,
+      "breach_min": 13.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 703,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 708,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.0833330154418945,
+      "breach_min": 8.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 713,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 714,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.25,
+      "breach_min": 6.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 719,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 725,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 726,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 17.25,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 730,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 733,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 737,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.833333492279053,
+      "breach_min": 7.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 741,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.8333332538604736,
+      "breach_min": 7.25,
+      "alarm_min": 3.4166667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 746,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 755,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.9166669845581055,
+      "breach_min": 7.333333492279053,
+      "alarm_min": 6.416666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 760,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 763,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.9166669845581055,
+      "breach_min": 12.916666984558105,
+      "alarm_min": 7.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 772,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.75,
+      "breach_min": 10.416666984558105,
+      "alarm_min": 9.666666984558105,
+      "false_alarm": false
+    },
+    {
+      "event_id": 775,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 776,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.416666507720947,
+      "breach_min": 6.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 777,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.25,
+      "breach_min": 7.083333492279053,
+      "alarm_min": 6.833333492279053,
+      "false_alarm": false
+    },
+    {
+      "event_id": 782,
+      "breached": true,
+      "warned": true,
+      "warning_min": 16.91666603088379,
+      "breach_min": 18.91666603088379,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 794,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.333333492279053,
+      "breach_min": 6.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 798,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 815,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.5,
+      "breach_min": 6.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 823,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 828,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 841,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.083333492279053,
+      "breach_min": 7.333333492279053,
+      "alarm_min": 3.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 850,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 851,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 861,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.833333492279053,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 874,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 878,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 885,
+      "breached": true,
+      "warned": true,
+      "warning_min": 9.083333015441895,
+      "breach_min": 11.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 888,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 902,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 907,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 914,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 24.25,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 915,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 16.91666603088379,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 918,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.8333330154418945,
+      "breach_min": 8.083333015441895,
+      "alarm_min": 7.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 935,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.9166665077209473,
+      "breach_min": 4.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 939,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.583333492279053,
+      "breach_min": 6.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 948,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 960,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 963,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 12.916666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 969,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 971,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.25,
+      "breach_min": 6.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 976,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.3333334922790527,
+      "breach_min": 5.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 983,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 984,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 14.5,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 990,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 995,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 998,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1003,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.416666507720947,
+      "breach_min": 7.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1010,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.166666507720947,
+      "breach_min": 7.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1011,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1013,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.5,
+      "breach_min": 7.416666507720947,
+      "alarm_min": 4.916666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1018,
+      "breached": true,
+      "warned": true,
+      "warning_min": 1.4166669845581055,
+      "breach_min": 11.25,
+      "alarm_min": 9.833333015441895,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1020,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 2.9166667461395264,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1025,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.16666698455810547,
+      "breach_min": 9.666666984558105,
+      "alarm_min": 9.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1026,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.833333492279053,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1029,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.75,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 5.916666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1030,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1034,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1035,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1040,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.0,
+      "breach_min": 6.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1044,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.416666507720947,
+      "breach_min": 6.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1045,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 7.0,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1047,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.16666650772094727,
+      "breach_min": 3.0833332538604736,
+      "alarm_min": 2.9166667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1049,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.583333492279053,
+      "breach_min": 6.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1050,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.0,
+      "breach_min": 5.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1053,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1062,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1065,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.8333334922790527,
+      "breach_min": 5.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1072,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1077,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.083333492279053,
+      "breach_min": 7.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1080,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.5833330154418945,
+      "breach_min": 9.333333015441895,
+      "alarm_min": 8.75,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1085,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1088,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1089,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.833333492279053,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1093,
+      "breached": true,
+      "warned": true,
+      "warning_min": 8.833333015441895,
+      "breach_min": 10.833333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1094,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.8333334922790527,
+      "breach_min": 5.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1098,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1107,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1110,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 7.416666507720947,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1115,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1116,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1117,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1135,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1142,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.166666507720947,
+      "breach_min": 6.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1147,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1159,
+      "breached": true,
+      "warned": true,
+      "warning_min": 13.833333015441895,
+      "breach_min": 15.833333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1160,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.1666665077209473,
+      "breach_min": 4.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1167,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.5833330154418945,
+      "breach_min": 15.25,
+      "alarm_min": 14.666666984558105,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1169,
+      "breached": true,
+      "warned": true,
+      "warning_min": 18.91666603088379,
+      "breach_min": 20.91666603088379,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1171,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.583333253860474,
+      "breach_min": 8.5,
+      "alarm_min": 3.9166667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1173,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.583333492279053,
+      "breach_min": 6.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1174,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.25,
+      "breach_min": 7.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1189,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.916666507720947,
+      "breach_min": 7.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1194,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.3333330154418945,
+      "breach_min": 8.333333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1206,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 5.916666507720947,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1207,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.08333301544189453,
+      "breach_min": 9.25,
+      "alarm_min": 9.166666984558105,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1209,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.9166669845581055,
+      "breach_min": 12.166666984558105,
+      "alarm_min": 9.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1211,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.33333349227905273,
+      "breach_min": 6.75,
+      "alarm_min": 6.416666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1219,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.08333301544189453,
+      "breach_min": 8.333333015441895,
+      "alarm_min": 8.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1227,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 17.33333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1228,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1239,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.33333396911621094,
+      "breach_min": 9.416666984558105,
+      "alarm_min": 9.083333015441895,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1244,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1245,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1246,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1252,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.25,
+      "breach_min": 7.0,
+      "alarm_min": 6.75,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1256,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1259,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.5,
+      "breach_min": 7.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1260,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.25,
+      "breach_min": 7.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1263,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1266,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.9166665077209473,
+      "breach_min": 5.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1268,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1288,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1292,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.75,
+      "breach_min": 4.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1293,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1299,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.75,
+      "breach_min": 12.25,
+      "alarm_min": 8.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1304,
+      "breached": true,
+      "warned": true,
+      "warning_min": 7.5,
+      "breach_min": 9.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1308,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.9166667461395264,
+      "breach_min": 2.9166667461395264,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1309,
+      "breached": true,
+      "warned": true,
+      "warning_min": 19.333333492279053,
+      "breach_min": 26.5,
+      "alarm_min": 7.166666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1326,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1339,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.25,
+      "breach_min": 7.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1342,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1345,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1348,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 20.66666603088379,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1351,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.75,
+      "breach_min": 6.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1353,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1355,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1356,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1362,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1363,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.5,
+      "breach_min": 6.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1367,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1375,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.41666698455810547,
+      "breach_min": 8.75,
+      "alarm_min": 8.333333015441895,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1376,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1377,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 14.166666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1378,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.75,
+      "breach_min": 7.25,
+      "alarm_min": 6.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1379,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.8333330154418945,
+      "breach_min": 10.333333015441895,
+      "alarm_min": 9.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1382,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.250000238418579,
+      "breach_min": 9.166666984558105,
+      "alarm_min": 2.9166667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1390,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.75,
+      "breach_min": 5.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1392,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1394,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1411,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.08333301544189453,
+      "breach_min": 13.583333015441895,
+      "alarm_min": 13.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1415,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1421,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.6666669845581055,
+      "breach_min": 10.166666984558105,
+      "alarm_min": 9.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1428,
+      "breached": true,
+      "warned": true,
+      "warning_min": 9.75,
+      "breach_min": 11.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1435,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1436,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1444,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.166666507720947,
+      "breach_min": 6.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1445,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 9.833333015441895,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1446,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1468,
+      "breached": true,
+      "warned": true,
+      "warning_min": 8.25,
+      "breach_min": 10.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1477,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.9166665077209473,
+      "breach_min": 4.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1480,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1484,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 7.333333492279053,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1492,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.416666507720947,
+      "breach_min": 6.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1494,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 15.666666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    }
+  ],
+  "test": [
+    {
+      "event_id": 3,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.8333334922790527,
+      "breach_min": 5.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 4,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.25,
+      "false_alarm": true
+    },
+    {
+      "event_id": 5,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 13,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.4166669845581055,
+      "breach_min": 8.416666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 14,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
@@ -939,165 +2721,129 @@
       "false_alarm": false
     },
     {
-      "event_id": 21,
-      "breached": false,
+      "event_id": 27,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.41666698455810547,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 6.416666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 38,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.083333492279053,
+      "breach_min": 7.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 39,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.16666650772094727,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 5.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 42,
+      "breached": true,
       "warned": false,
       "warning_min": NaN,
-      "breach_min": NaN,
+      "breach_min": 4.916666507720947,
       "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 25,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 26,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 4.333333492279053,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 30,
+      "event_id": 49,
       "breached": true,
       "warned": true,
-      "warning_min": 3.749999761581421,
-      "breach_min": 5.916666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 31,
-      "breached": true,
-      "warned": true,
-      "warning_min": 5.166666746139526,
-      "breach_min": 7.333333492279053,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 33,
-      "breached": true,
-      "warned": true,
-      "warning_min": 7.916666269302368,
-      "breach_min": 10.083333015441895,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 48,
-      "breached": true,
-      "warned": true,
-      "warning_min": 11.583333730697632,
-      "breach_min": 13.916666984558105,
-      "alarm_min": 2.3333332538604736,
-      "false_alarm": false
-    },
-    {
-      "event_id": 52,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.499999761581421,
-      "breach_min": 6.666666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 59,
-      "breached": true,
-      "warned": true,
-      "warning_min": 8.000000238418579,
-      "breach_min": 10.166666984558105,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 73,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 75,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 77,
-      "breached": true,
-      "warned": true,
-      "warning_min": 0.75,
-      "breach_min": 4.5,
-      "alarm_min": 3.75,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 84,
       "breached": true,
+      "warned": true,
+      "warning_min": 0.08333396911621094,
+      "breach_min": 9.666666984558105,
+      "alarm_min": 9.583333015441895,
+      "false_alarm": false
+    },
+    {
+      "event_id": 86,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.1666665077209473,
+      "breach_min": 6.416666507720947,
+      "alarm_min": 4.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 91,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.333333492279053,
+      "breach_min": 6.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 94,
+      "breached": false,
       "warned": false,
       "warning_min": NaN,
-      "breach_min": 9.666666984558105,
+      "breach_min": NaN,
+      "alarm_min": 2.4166667461395264,
+      "false_alarm": true
+    },
+    {
+      "event_id": 95,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.25,
+      "breach_min": 7.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 99,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
       "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 88,
-      "breached": true,
-      "warned": true,
-      "warning_min": 5.583333253860474,
-      "breach_min": 7.75,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 98,
-      "breached": true,
-      "warned": true,
-      "warning_min": 17.833332777023315,
-      "breach_min": 20.91666603088379,
-      "alarm_min": 3.0833332538604736,
       "false_alarm": false
     },
     {
       "event_id": 101,
       "breached": true,
-      "warned": true,
-      "warning_min": 5.083333253860474,
+      "warned": false,
+      "warning_min": NaN,
       "breach_min": 7.25,
-      "alarm_min": 2.1666667461395264,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
       "event_id": 103,
       "breached": true,
-      "warned": false,
-      "warning_min": NaN,
+      "warned": true,
+      "warning_min": 0.25,
       "breach_min": 4.833333492279053,
-      "alarm_min": NaN,
+      "alarm_min": 4.583333492279053,
       "false_alarm": false
     },
     {
-      "event_id": 111,
+      "event_id": 107,
       "breached": true,
-      "warned": true,
-      "warning_min": 4.083333253860474,
-      "breach_min": 7.416666507720947,
-      "alarm_min": 3.3333332538604736,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 28.66666603088379,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
@@ -1110,34 +2856,43 @@
       "false_alarm": false
     },
     {
-      "event_id": 120,
+      "event_id": 124,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 133,
       "breached": true,
       "warned": true,
-      "warning_min": 11.250000238418579,
-      "breach_min": 13.416666984558105,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.5,
+      "breach_min": 7.5,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 129,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 132,
+      "event_id": 134,
       "breached": true,
       "warned": true,
-      "warning_min": 6.083333253860474,
-      "breach_min": 8.25,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 4.5,
+      "breach_min": 6.5,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 141,
+      "event_id": 139,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.0833330154418945,
+      "breach_min": 8.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 142,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1146,7 +2901,16 @@
       "false_alarm": false
     },
     {
-      "event_id": 150,
+      "event_id": 143,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.166666507720947,
+      "breach_min": 6.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 147,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1155,34 +2919,79 @@
       "false_alarm": false
     },
     {
-      "event_id": 153,
+      "event_id": 152,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.000000238418579,
+      "breach_min": 8.916666984558105,
+      "alarm_min": 2.9166667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 162,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
-      "alarm_min": 5.666666507720947,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 169,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
       "false_alarm": true
     },
     {
-      "event_id": 155,
+      "event_id": 174,
       "breached": true,
       "warned": true,
-      "warning_min": 7.666666269302368,
-      "breach_min": 9.833333015441895,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 11.0,
+      "breach_min": 13.0,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 156,
+      "event_id": 177,
       "breached": true,
       "warned": true,
-      "warning_min": 1.9166667461395264,
-      "breach_min": 4.083333492279053,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 6.4166669845581055,
+      "breach_min": 8.416666984558105,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 157,
+      "event_id": 184,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.166666507720947,
+      "breach_min": 6.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 186,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 8.75,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 200,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.1666665077209473,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 208,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1191,16 +3000,7 @@
       "false_alarm": false
     },
     {
-      "event_id": 165,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.166666746139526,
-      "breach_min": 6.333333492279053,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 168,
+      "event_id": 214,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1209,25 +3009,25 @@
       "false_alarm": false
     },
     {
-      "event_id": 178,
+      "event_id": 216,
       "breached": true,
       "warned": false,
       "warning_min": NaN,
-      "breach_min": 13.916666984558105,
+      "breach_min": 13.5,
       "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 180,
+      "event_id": 228,
       "breached": true,
       "warned": true,
-      "warning_min": 3.0833332538604736,
-      "breach_min": 5.25,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 8.416666984558105,
+      "breach_min": 10.416666984558105,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 189,
+      "event_id": 236,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1236,57 +3036,12 @@
       "false_alarm": false
     },
     {
-      "event_id": 190,
+      "event_id": 238,
       "breached": true,
       "warned": true,
-      "warning_min": 2.8333332538604736,
-      "breach_min": 5.0,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 191,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.499999761581421,
-      "breach_min": 6.666666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 204,
-      "breached": true,
-      "warned": true,
-      "warning_min": 0.9166665077209473,
-      "breach_min": 3.0833332538604736,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 215,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 224,
-      "breached": true,
-      "warned": true,
-      "warning_min": 9.250000238418579,
-      "breach_min": 11.416666984558105,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 233,
-      "breached": true,
-      "warned": true,
-      "warning_min": 6.25,
-      "breach_min": 8.5,
-      "alarm_min": 2.25,
+      "warning_min": 3.0833334922790527,
+      "breach_min": 5.083333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
@@ -1299,16 +3054,16 @@
       "false_alarm": false
     },
     {
-      "event_id": 243,
+      "event_id": 240,
       "breached": true,
       "warned": true,
-      "warning_min": 4.999999761581421,
-      "breach_min": 7.166666507720947,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 0.33333349227905273,
+      "breach_min": 3.4166667461395264,
+      "alarm_min": 3.0833332538604736,
       "false_alarm": false
     },
     {
-      "event_id": 247,
+      "event_id": 244,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1318,24 +3073,33 @@
     },
     {
       "event_id": 252,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 253,
       "breached": true,
       "warned": true,
-      "warning_min": 4.166666746139526,
-      "breach_min": 6.333333492279053,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 0.5,
+      "breach_min": 2.9166667461395264,
+      "alarm_min": 2.4166667461395264,
       "false_alarm": false
     },
     {
-      "event_id": 264,
+      "event_id": 258,
       "breached": true,
       "warned": true,
-      "warning_min": 0.8333330154418945,
-      "breach_min": 5.166666507720947,
-      "alarm_min": 4.333333492279053,
+      "warning_min": 10.916666984558105,
+      "breach_min": 12.916666984558105,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 265,
+      "event_id": 268,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1344,88 +3108,70 @@
       "false_alarm": false
     },
     {
-      "event_id": 272,
+      "event_id": 276,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 283,
       "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 16.58333396911621,
-      "alarm_min": NaN,
+      "warned": true,
+      "warning_min": 4.5,
+      "breach_min": 6.5,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 275,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 277,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": true
-    },
-    {
-      "event_id": 282,
+      "event_id": 289,
       "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 2.1666667461395264,
-      "alarm_min": NaN,
+      "warned": true,
+      "warning_min": 4.0,
+      "breach_min": 6.0,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 291,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 6.5,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 301,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 12.833333015441895,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 304,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
-      "alarm_min": 3.75,
-      "false_alarm": true
+      "alarm_min": NaN,
+      "false_alarm": false
     },
     {
-      "event_id": 312,
+      "event_id": 295,
       "breached": true,
-      "warned": true,
-      "warning_min": 4.166666746139526,
-      "breach_min": 6.333333492279053,
-      "alarm_min": 2.1666667461395264,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 12.666666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 299,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
       "event_id": 313,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": true
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.333333492279053,
+      "breach_min": 6.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
     },
     {
-      "event_id": 321,
+      "event_id": 316,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1434,70 +3180,34 @@
       "false_alarm": false
     },
     {
-      "event_id": 323,
+      "event_id": 320,
       "breached": true,
       "warned": true,
-      "warning_min": 16.166667222976685,
-      "breach_min": 18.33333396911621,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.0833330154418945,
+      "breach_min": 10.083333015441895,
+      "alarm_min": 5.0,
       "false_alarm": false
     },
     {
-      "event_id": 327,
+      "event_id": 322,
       "breached": true,
       "warned": true,
-      "warning_min": 5.583333253860474,
-      "breach_min": 7.75,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 5.583333492279053,
+      "breach_min": 7.583333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 335,
+      "event_id": 331,
       "breached": true,
       "warned": true,
-      "warning_min": 4.583333253860474,
-      "breach_min": 6.75,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 0.41666650772094727,
+      "breach_min": 7.25,
+      "alarm_min": 6.833333492279053,
       "false_alarm": false
     },
     {
       "event_id": 336,
-      "breached": true,
-      "warned": true,
-      "warning_min": 10.416666269302368,
-      "breach_min": 12.583333015441895,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 337,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.249999761581421,
-      "breach_min": 6.416666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 338,
-      "breached": true,
-      "warned": true,
-      "warning_min": 3.0833334922790527,
-      "breach_min": 7.583333492279053,
-      "alarm_min": 4.5,
-      "false_alarm": false
-    },
-    {
-      "event_id": 339,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": 4.25,
-      "false_alarm": true
-    },
-    {
-      "event_id": 341,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1506,16 +3216,61 @@
       "false_alarm": false
     },
     {
-      "event_id": 342,
+      "event_id": 348,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 8.833333015441895,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 353,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 355,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 359,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 361,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 366,
       "breached": true,
       "warned": true,
-      "warning_min": 4.416666746139526,
-      "breach_min": 6.583333492279053,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 0.16666698455810547,
+      "breach_min": 11.666666984558105,
+      "alarm_min": 11.5,
       "false_alarm": false
     },
     {
-      "event_id": 350,
+      "event_id": 367,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1524,43 +3279,16 @@
       "false_alarm": false
     },
     {
-      "event_id": 351,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 360,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 363,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 370,
+      "event_id": 372,
       "breached": true,
       "warned": true,
-      "warning_min": 0.5833330154418945,
-      "breach_min": 6.166666507720947,
-      "alarm_min": 5.583333492279053,
+      "warning_min": 3.8333334922790527,
+      "breach_min": 5.833333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 373,
+      "event_id": 374,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1569,43 +3297,16 @@
       "false_alarm": false
     },
     {
-      "event_id": 383,
+      "event_id": 375,
       "breached": true,
       "warned": true,
-      "warning_min": 0.25,
-      "breach_min": 8.416666984558105,
-      "alarm_min": 8.166666984558105,
+      "warning_min": 8.333333015441895,
+      "breach_min": 10.333333015441895,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 384,
-      "breached": true,
-      "warned": true,
-      "warning_min": 3.249999523162842,
-      "breach_min": 9.833333015441895,
-      "alarm_min": 6.583333492279053,
-      "false_alarm": false
-    },
-    {
-      "event_id": 389,
-      "breached": true,
-      "warned": true,
-      "warning_min": 0.08333349227905273,
-      "breach_min": 7.333333492279053,
-      "alarm_min": 7.25,
-      "false_alarm": false
-    },
-    {
-      "event_id": 391,
-      "breached": true,
-      "warned": true,
-      "warning_min": 3.9166667461395264,
-      "breach_min": 6.083333492279053,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 392,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1614,25 +3315,7 @@
       "false_alarm": false
     },
     {
-      "event_id": 394,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": true
-    },
-    {
-      "event_id": 398,
-      "breached": true,
-      "warned": true,
-      "warning_min": 6.916666269302368,
-      "breach_min": 9.083333015441895,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 406,
+      "event_id": 386,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1641,7 +3324,25 @@
       "false_alarm": false
     },
     {
-      "event_id": 407,
+      "event_id": 387,
+      "breached": true,
+      "warned": true,
+      "warning_min": 7.5833330154418945,
+      "breach_min": 9.583333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 388,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.8333330154418945,
+      "breach_min": 13.083333015441895,
+      "alarm_min": 9.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 399,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1650,7 +3351,16 @@
       "false_alarm": false
     },
     {
-      "event_id": 408,
+      "event_id": 401,
+      "breached": true,
+      "warned": true,
+      "warning_min": 9.166666984558105,
+      "breach_min": 11.166666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 404,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1659,70 +3369,97 @@
       "false_alarm": false
     },
     {
-      "event_id": 428,
+      "event_id": 409,
       "breached": true,
       "warned": true,
-      "warning_min": 0.08333301544189453,
-      "breach_min": 10.75,
-      "alarm_min": 10.666666984558105,
+      "warning_min": 7.25,
+      "breach_min": 9.25,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 438,
+      "event_id": 415,
       "breached": true,
-      "warned": true,
-      "warning_min": 5.6666669845581055,
-      "breach_min": 10.166666984558105,
-      "alarm_min": 4.5,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 6.416666507720947,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 440,
-      "breached": true,
-      "warned": true,
-      "warning_min": 4.083333253860474,
-      "breach_min": 6.25,
-      "alarm_min": 2.1666667461395264,
+      "event_id": 418,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
       "false_alarm": false
     },
     {
-      "event_id": 442,
+      "event_id": 444,
       "breached": true,
       "warned": true,
-      "warning_min": 4.666666746139526,
+      "warning_min": 6.8333330154418945,
+      "breach_min": 12.833333015441895,
+      "alarm_min": 6.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 445,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.833333492279053,
       "breach_min": 6.833333492279053,
-      "alarm_min": 2.1666667461395264,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 447,
+      "event_id": 449,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 452,
       "breached": true,
       "warned": true,
-      "warning_min": 1.6666665077209473,
-      "breach_min": 3.8333332538604736,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 8.916666984558105,
+      "breach_min": 10.916666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 455,
+      "breached": true,
+      "warned": true,
+      "warning_min": 22.25,
+      "breach_min": 24.25,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
       "event_id": 456,
-      "breached": false,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": NaN,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 463,
       "breached": true,
       "warned": true,
-      "warning_min": 7.583333253860474,
-      "breach_min": 9.75,
-      "alarm_min": 2.1666667461395264,
+      "warning_min": 3.0833334922790527,
+      "breach_min": 5.083333492279053,
+      "alarm_min": 2.0,
       "false_alarm": false
     },
     {
-      "event_id": 478,
+      "event_id": 459,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.0833334922790527,
+      "breach_min": 5.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 461,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
@@ -1731,40 +3468,1867 @@
       "false_alarm": false
     },
     {
-      "event_id": 482,
+      "event_id": 466,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
       "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 476,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 7.75,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 477,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 484,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.08333396911621094,
+      "breach_min": 8.166666984558105,
+      "alarm_min": 8.083333015441895,
       "false_alarm": false
     },
     {
       "event_id": 486,
-      "breached": true,
-      "warned": true,
-      "warning_min": 3.999999761581421,
-      "breach_min": 6.166666507720947,
-      "alarm_min": 2.1666667461395264,
-      "false_alarm": false
-    },
-    {
-      "event_id": 489,
-      "breached": true,
-      "warned": false,
-      "warning_min": NaN,
-      "breach_min": 12.25,
-      "alarm_min": NaN,
-      "false_alarm": false
-    },
-    {
-      "event_id": 498,
       "breached": false,
       "warned": false,
       "warning_min": NaN,
       "breach_min": NaN,
-      "alarm_min": 2.1666667461395264,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 487,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.75,
+      "breach_min": 3.5,
+      "alarm_min": 2.75,
+      "false_alarm": false
+    },
+    {
+      "event_id": 492,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.75,
+      "breach_min": 6.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 495,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.5,
+      "breach_min": 6.583333492279053,
+      "alarm_min": 6.083333492279053,
+      "false_alarm": false
+    },
+    {
+      "event_id": 497,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.16666650772094727,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 5.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 502,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 2.0,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 503,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 23.58333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 504,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.5,
+      "breach_min": 5.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 509,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 3.9166667461395264,
       "false_alarm": true
+    },
+    {
+      "event_id": 512,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.0,
+      "breach_min": 6.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 515,
+      "breached": true,
+      "warned": true,
+      "warning_min": 14.75,
+      "breach_min": 16.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 518,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.666666507720947,
+      "breach_min": 7.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 525,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.666666030883789,
+      "breach_min": 12.083333015441895,
+      "alarm_min": 8.416666984558105,
+      "false_alarm": false
+    },
+    {
+      "event_id": 526,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.416666507720947,
+      "breach_min": 7.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 543,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 554,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 559,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 570,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.749999523162842,
+      "breach_min": 8.083333015441895,
+      "alarm_min": 5.333333492279053,
+      "false_alarm": false
+    },
+    {
+      "event_id": 571,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 576,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.083333253860474,
+      "breach_min": 7.25,
+      "alarm_min": 3.1666667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 577,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.5833334922790527,
+      "breach_min": 5.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 580,
+      "breached": true,
+      "warned": true,
+      "warning_min": 8.083333015441895,
+      "breach_min": 10.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 588,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.0,
+      "breach_min": 5.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 614,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 616,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.833333492279053,
+      "breach_min": 7.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 617,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.8333334922790527,
+      "breach_min": 4.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 620,
+      "breached": true,
+      "warned": true,
+      "warning_min": 7.9166669845581055,
+      "breach_min": 9.916666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 624,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 627,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 636,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 638,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.3333330154418945,
+      "breach_min": 8.333333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 641,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 644,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.25,
+      "breach_min": 8.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 647,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.5833334922790527,
+      "breach_min": 5.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 653,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 657,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 658,
+      "breached": true,
+      "warned": true,
+      "warning_min": 13.25,
+      "breach_min": 15.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 663,
+      "breached": true,
+      "warned": true,
+      "warning_min": 14.166666030883789,
+      "breach_min": 16.16666603088379,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 670,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 29.33333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 683,
+      "breached": true,
+      "warned": true,
+      "warning_min": 10.333333969116211,
+      "breach_min": 22.33333396911621,
+      "alarm_min": 12.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 693,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.6666669845581055,
+      "breach_min": 7.833333492279053,
+      "alarm_min": 7.166666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 696,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 712,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 715,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.0833334922790527,
+      "breach_min": 5.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 718,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.0833330154418945,
+      "breach_min": 8.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 720,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.1666665077209473,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 721,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 727,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.8333334922790527,
+      "breach_min": 5.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 739,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 8.166666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 744,
+      "breached": true,
+      "warned": true,
+      "warning_min": 13.916666984558105,
+      "breach_min": 15.916666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 747,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.0833334922790527,
+      "breach_min": 4.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 751,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 753,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.9166665077209473,
+      "breach_min": 5.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 762,
+      "breached": true,
+      "warned": true,
+      "warning_min": 1.4166667461395264,
+      "breach_min": 3.4166667461395264,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 766,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 768,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 769,
+      "breached": true,
+      "warned": true,
+      "warning_min": 8.166666984558105,
+      "breach_min": 11.416666984558105,
+      "alarm_min": 3.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 774,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 4.833333492279053,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 788,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.75,
+      "breach_min": 6.5,
+      "alarm_min": 5.75,
+      "false_alarm": false
+    },
+    {
+      "event_id": 789,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 26.5,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 790,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 791,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 792,
+      "breached": true,
+      "warned": true,
+      "warning_min": 9.916666984558105,
+      "breach_min": 11.916666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 795,
+      "breached": true,
+      "warned": true,
+      "warning_min": 10.416666984558105,
+      "breach_min": 12.416666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 802,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 803,
+      "breached": true,
+      "warned": true,
+      "warning_min": 10.666666984558105,
+      "breach_min": 12.666666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 806,
+      "breached": true,
+      "warned": true,
+      "warning_min": 2.25,
+      "breach_min": 6.583333492279053,
+      "alarm_min": 4.333333492279053,
+      "false_alarm": false
+    },
+    {
+      "event_id": 808,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.9166669845581055,
+      "breach_min": 8.916666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 810,
+      "breached": true,
+      "warned": true,
+      "warning_min": 7.0833330154418945,
+      "breach_min": 9.083333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 814,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 817,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 820,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 824,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 831,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 832,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.5833332538604736,
+      "breach_min": 5.75,
+      "alarm_min": 2.1666667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 834,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.333333253860474,
+      "breach_min": 9.25,
+      "alarm_min": 3.9166667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 839,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 13.25,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 853,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.166666507720947,
+      "breach_min": 7.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 854,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 28.58333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 856,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 859,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 867,
+      "breached": true,
+      "warned": true,
+      "warning_min": 12.916666984558105,
+      "breach_min": 14.916666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 871,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 873,
+      "breached": true,
+      "warned": true,
+      "warning_min": 9.166666984558105,
+      "breach_min": 11.166666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 876,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 13.916666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 877,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.16666698455810547,
+      "breach_min": 12.666666984558105,
+      "alarm_min": 12.5,
+      "false_alarm": false
+    },
+    {
+      "event_id": 879,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 883,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.25,
+      "breach_min": 8.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 886,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 2.8333332538604736,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 887,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.333333492279053,
+      "breach_min": 7.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 889,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.25,
+      "breach_min": 4.583333492279053,
+      "alarm_min": 4.333333492279053,
+      "false_alarm": false
+    },
+    {
+      "event_id": 891,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.8333334922790527,
+      "breach_min": 7.833333492279053,
+      "alarm_min": 7.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 901,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.333333492279053,
+      "breach_min": 7.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 903,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 13.166666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 908,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 911,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.666666507720947,
+      "breach_min": 7.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 912,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 916,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 919,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.8333332538604736,
+      "breach_min": 3.0833332538604736,
+      "alarm_min": 2.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 920,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 925,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 930,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0833332538604736,
+      "false_alarm": true
+    },
+    {
+      "event_id": 938,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.5,
+      "breach_min": 5.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 970,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 973,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.6666669845581055,
+      "breach_min": 6.583333492279053,
+      "alarm_min": 5.916666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 980,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.666666507720947,
+      "breach_min": 6.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 982,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.1666665077209473,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 989,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.333333492279053,
+      "breach_min": 7.333333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1000,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1004,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.750000238418579,
+      "breach_min": 5.833333492279053,
+      "alarm_min": 2.0833332538604736,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1008,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 8.416666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1017,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1021,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.75,
+      "breach_min": 6.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1027,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 10.583333015441895,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1032,
+      "breached": true,
+      "warned": true,
+      "warning_min": 7.6666669845581055,
+      "breach_min": 9.666666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1033,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.16666674613952637,
+      "breach_min": 2.1666667461395264,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1037,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1038,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1043,
+      "breached": true,
+      "warned": true,
+      "warning_min": 9.583333015441895,
+      "breach_min": 11.583333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1046,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.1666665077209473,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1051,
+      "breached": true,
+      "warned": true,
+      "warning_min": 14.749999284744263,
+      "breach_min": 16.91666603088379,
+      "alarm_min": 2.1666667461395264,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1066,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.833333492279053,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1073,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1079,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1087,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.916666507720947,
+      "breach_min": 6.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1091,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1092,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.583333492279053,
+      "breach_min": 7.583333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1099,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1100,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1109,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.5,
+      "breach_min": 6.75,
+      "alarm_min": 6.25,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1111,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.0,
+      "breach_min": 7.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1121,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 10.333333015441895,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1128,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.5,
+      "breach_min": 6.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1131,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 5.583333492279053,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1134,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1136,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1138,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1140,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.083333492279053,
+      "breach_min": 7.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1143,
+      "breached": true,
+      "warned": true,
+      "warning_min": 12.416666984558105,
+      "breach_min": 14.416666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1144,
+      "breached": true,
+      "warned": true,
+      "warning_min": 7.25,
+      "breach_min": 9.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1146,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1150,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 7.916666507720947,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1151,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1166,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.166666507720947,
+      "breach_min": 7.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1168,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1175,
+      "breached": true,
+      "warned": true,
+      "warning_min": 13.416666984558105,
+      "breach_min": 15.416666984558105,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1178,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.75,
+      "breach_min": 5.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1195,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1205,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.0,
+      "breach_min": 8.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1213,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1214,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.0833334922790527,
+      "breach_min": 5.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1216,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1231,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1232,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 14.916666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1237,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.5,
+      "breach_min": 6.5,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1247,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.833333492279053,
+      "breach_min": 7.833333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1253,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 17.58333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1258,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.08333396911621094,
+      "breach_min": 12.416666984558105,
+      "alarm_min": 12.333333015441895,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1267,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1276,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1279,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1281,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 6.666666507720947,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1284,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1286,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.166666507720947,
+      "breach_min": 7.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1291,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.0,
+      "breach_min": 5.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1300,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1301,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1306,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1307,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.8333330154418945,
+      "breach_min": 8.833333015441895,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1314,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 2.0,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1320,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 8.166666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1322,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 13.416666984558105,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1324,
+      "breached": true,
+      "warned": true,
+      "warning_min": 6.0,
+      "breach_min": 8.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1330,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": 5.166666507720947,
+      "false_alarm": true
+    },
+    {
+      "event_id": 1347,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.25,
+      "breach_min": 6.25,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1352,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 7.333333492279053,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1364,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1369,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1371,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.1666665077209473,
+      "breach_min": 5.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1380,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.5,
+      "breach_min": 11.666666984558105,
+      "alarm_min": 11.166666984558105,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1386,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 28.58333396911621,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1387,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.083333492279053,
+      "breach_min": 7.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1393,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.416666507720947,
+      "breach_min": 7.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1397,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.9166665077209473,
+      "breach_min": 5.916666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1400,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1407,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.083333492279053,
+      "breach_min": 7.083333492279053,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1408,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.416666507720947,
+      "breach_min": 6.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1426,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1437,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1438,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.416666507720947,
+      "breach_min": 6.416666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1442,
+      "breached": true,
+      "warned": true,
+      "warning_min": 1.0,
+      "breach_min": 3.0,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1443,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1449,
+      "breached": true,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": 2.0,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1455,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.166666507720947,
+      "breach_min": 6.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1469,
+      "breached": true,
+      "warned": true,
+      "warning_min": 4.166666507720947,
+      "breach_min": 6.166666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1470,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1474,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1475,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1479,
+      "breached": true,
+      "warned": true,
+      "warning_min": 0.6666669845581055,
+      "breach_min": 6.833333492279053,
+      "alarm_min": 6.166666507720947,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1487,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1488,
+      "breached": true,
+      "warned": true,
+      "warning_min": 5.666666507720947,
+      "breach_min": 7.666666507720947,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1489,
+      "breached": true,
+      "warned": true,
+      "warning_min": 3.75,
+      "breach_min": 5.75,
+      "alarm_min": 2.0,
+      "false_alarm": false
+    },
+    {
+      "event_id": 1499,
+      "breached": false,
+      "warned": false,
+      "warning_min": NaN,
+      "breach_min": NaN,
+      "alarm_min": NaN,
+      "false_alarm": false
     }
   ]
 }

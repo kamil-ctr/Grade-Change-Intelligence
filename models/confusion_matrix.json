@@ -1,222 +1,134 @@
 {
-  "lightgbm": {
-    "validation": {
-      "threshold": 0.6,
-      "labels": [
-        "in-spec (no breach ahead)",
-        "breach within horizon"
-      ],
-      "matrix": [
-        [
-          22224,
-          821
-        ],
-        [
-          3295,
-          3610
-        ]
-      ],
-      "true_negative": 22224,
-      "false_positive": 821,
-      "false_negative": 3295,
-      "true_positive": 3610
-    },
-    "test": {
-      "threshold": 0.6,
-      "labels": [
-        "in-spec (no breach ahead)",
-        "breach within horizon"
-      ],
-      "matrix": [
-        [
-          21783,
-          926
-        ],
-        [
-          2707,
-          3741
-        ]
-      ],
-      "true_negative": 21783,
-      "false_positive": 926,
-      "false_negative": 2707,
-      "true_positive": 3741
-    }
-  },
-  "xgboost": {
-    "validation": {
-      "threshold": 0.7,
-      "labels": [
-        "in-spec (no breach ahead)",
-        "breach within horizon"
-      ],
-      "matrix": [
-        [
-          22280,
-          765
-        ],
-        [
-          3330,
-          3575
-        ]
-      ],
-      "true_negative": 22280,
-      "false_positive": 765,
-      "false_negative": 3330,
-      "true_positive": 3575
-    },
-    "test": {
-      "threshold": 0.7,
-      "labels": [
-        "in-spec (no breach ahead)",
-        "breach within horizon"
-      ],
-      "matrix": [
-        [
-          21996,
-          713
-        ],
-        [
-          2901,
-          3547
-        ]
-      ],
-      "true_negative": 21996,
-      "false_positive": 713,
-      "false_negative": 2901,
-      "true_positive": 3547
-    }
-  },
   "random_forest": {
     "validation": {
-      "threshold": 0.55,
+      "threshold": 0.65,
       "labels": [
         "in-spec (no breach ahead)",
         "breach within horizon"
       ],
       "matrix": [
         [
-          22418,
-          627
+          67021,
+          1352
         ],
         [
-          3456,
-          3449
+          11065,
+          10138
         ]
       ],
-      "true_negative": 22418,
-      "false_positive": 627,
-      "false_negative": 3456,
-      "true_positive": 3449
+      "true_negative": 67021,
+      "false_positive": 1352,
+      "false_negative": 11065,
+      "true_positive": 10138
     },
     "test": {
-      "threshold": 0.55,
+      "threshold": 0.65,
       "labels": [
         "in-spec (no breach ahead)",
         "breach within horizon"
       ],
       "matrix": [
         [
-          22169,
-          540
+          66482,
+          1288
         ],
         [
-          3141,
-          3307
+          9316,
+          11009
         ]
       ],
-      "true_negative": 22169,
-      "false_positive": 540,
-      "false_negative": 3141,
-      "true_positive": 3307
+      "true_negative": 66482,
+      "false_positive": 1288,
+      "false_negative": 9316,
+      "true_positive": 11009
     }
   },
   "hist_gradient_boosting": {
     "validation": {
-      "threshold": 0.7,
+      "threshold": 0.85,
       "labels": [
         "in-spec (no breach ahead)",
         "breach within horizon"
       ],
       "matrix": [
         [
-          22294,
-          751
+          67106,
+          1267
         ],
         [
-          3407,
-          3498
+          11801,
+          9402
         ]
       ],
-      "true_negative": 22294,
-      "false_positive": 751,
-      "false_negative": 3407,
-      "true_positive": 3498
+      "true_negative": 67106,
+      "false_positive": 1267,
+      "false_negative": 11801,
+      "true_positive": 9402
     },
     "test": {
-      "threshold": 0.7,
+      "threshold": 0.85,
       "labels": [
         "in-spec (no breach ahead)",
         "breach within horizon"
       ],
       "matrix": [
         [
-          22037,
-          672
+          66586,
+          1184
         ],
         [
-          2885,
-          3563
+          10289,
+          10036
         ]
       ],
-      "true_negative": 22037,
-      "false_positive": 672,
-      "false_negative": 2885,
-      "true_positive": 3563
+      "true_negative": 66586,
+      "false_positive": 1184,
+      "false_negative": 10289,
+      "true_positive": 10036
     }
   },
   "logistic_regression": {
     "validation": {
-      "threshold": 0.45,
+      "threshold": 0.55,
       "labels": [
         "in-spec (no breach ahead)",
         "breach within horizon"
       ],
       "matrix": [
         [
-          21712,
-          1333
+          66068,
+          2305
         ],
         [
-          3035,
-          3870
+          10608,
+          10595
         ]
       ],
-      "true_negative": 21712,
-      "false_positive": 1333,
-      "false_negative": 3035,
-      "true_positive": 3870
+      "true_negative": 66068,
+      "false_positive": 2305,
+      "false_negative": 10608,
+      "true_positive": 10595
     },
     "test": {
-      "threshold": 0.45,
+      "threshold": 0.55,
       "labels": [
         "in-spec (no breach ahead)",
         "breach within horizon"
       ],
       "matrix": [
         [
-          21516,
-          1193
+          65342,
+          2428
         ],
         [
-          2376,
-          4072
+          8031,
+          12294
         ]
       ],
-      "true_negative": 21516,
-      "false_positive": 1193,
-      "false_negative": 2376,
-      "true_positive": 4072
+      "true_negative": 65342,
+      "false_positive": 2428,
+      "false_negative": 8031,
+      "true_positive": 12294
     }
   }
 }

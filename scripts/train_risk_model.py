@@ -50,7 +50,7 @@ def main() -> int:
     parser.add_argument(
         "--threshold-criterion", default="f1", choices=["f1", "fbeta", "max_fpr"]
     )
-    parser.add_argument("--perm-repeats", type=int, default=3)
+    parser.add_argument("--perm-repeats", type=int, default=8)
     parser.add_argument(
         "--regenerate", action="store_true",
         help="ignore the feature cache and rebuild the corpus",

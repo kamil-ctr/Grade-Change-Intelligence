@@ -12,6 +12,15 @@ scikit-learn>=1.3
 fastapi>=0.110
 uvicorn[standard]>=0.27
 pydantic>=2.6
+httpx>=0.27          # test-only: FastAPI's TestClient requires it
 
 # Optional: faster feature persistence (falls back to gzipped CSV if absent)
 # pyarrow>=15.0
+
+# Optional: better risk-model comparison and exact SHAP. Probed, never
+# assumed (gci/ml/registry.py) -- the pipeline still yields a usable model
+# without these. See CLAUDE.md's "Known traps" for install gotchas
+# (xgboost-cpu vs xgboost, the libomp requirement on macOS).
+# lightgbm>=4.0
+# xgboost-cpu>=2.0
+# shap>=0.45

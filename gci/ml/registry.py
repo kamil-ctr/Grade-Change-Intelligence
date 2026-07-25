@@ -80,13 +80,13 @@ class ModelSpec:
 def _random_forest():
     from sklearn.ensemble import RandomForestClassifier
 
-    # 150 trees is well past the point where added trees change the ranking on
-    # 100k rows; depth 10 with a leaf floor of 40 keeps it from memorising the
+    # 300 trees is well past the point where added trees change the ranking on
+    # 100k+ rows; depth 14 with a leaf floor of 20 keeps it from memorising the
     # heavy autocorrelation between consecutive samples within an event.
     return RandomForestClassifier(
-        n_estimators=150,
-        max_depth=10,
-        min_samples_leaf=40,
+        n_estimators=300,
+        max_depth=14,
+        min_samples_leaf=20,
         max_features="sqrt",
         n_jobs=-1,
         random_state=RANDOM_STATE,

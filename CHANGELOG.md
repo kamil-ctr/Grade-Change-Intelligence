@@ -4,6 +4,281 @@ Kept synchronised with the codebase. Newest first.
 
 ---
 
+## [0.9.0] — 2026-07-25 — React dashboard: Phase 1 (MVP) complete
+
+### New files
+
+`frontend/` — Vite + plain React, no TypeScript, no component library, no
+chart library (every chart is hand-rolled SVG). Production build: 207 KB JS
+/ 65 KB gzipped, 8.5 KB CSS. Six panels (`App.jsx` + `src/components/`):
+`ForecastCone`, `RecommendationsPanel`, `CorrelationTable`,
+`StabilizationBars`, `TrustPanel`, `EconomicsPanel`, each tagged with its
+deliverable number in its own header. Design tokens in `styles.css` follow
+the dataviz skill's validated reference palette (fixed-order categorical
+hues, reserved status colors, thin 2px marks, always-present legends).
+
+### Bug fixes
+
+1. **ROI Assumptions form rendered permanently empty.** `EconomicsPanel`
+   initialised its state with `useState(economics || {})`; `economics`
+   arrives asynchronously from the parent's fetch, after this component's
+   first render, and `useState`'s initial value is consumed exactly once.
+   Found by actually loading the page in a browser (`claude-in-chrome`), not
+   by code review — the bug was invisible in isolation since every *other*
+   panel's data arrived the same way but was rendered directly from props,
+   not copied into local state first. Fixed with a `useEffect` syncing local
+   state whenever the `economics` prop changes.
+
+### Verified
+
+Loaded against the live API in a real Chrome tab: all six panels render
+correct live data; clicked Reject on a real advisory and watched the Trust
+panel update immediately (2 surfaced -> 2 responded, 100% -> 50% acceptance,
+and the calibration text correctly flipped to "confidence is not yet
+separating accepted from rejected advice" once rejected-advisory confidence
+exceeded accepted-advisory confidence); zero console errors; clean
+production build; clean `oxlint`.
+
+### Milestone
+
+**Phase 1 (MVP) is complete** — all 10 modules built and verified, all 6
+graded deliverables have working, demonstrated evidence (not just code).
+Remaining choices: Phase 2 modules (What-If Studio, Copilot, trust-score
+learning, formal benchmark) vs. moving to the reserved packaging/deck block.
+
+---
+
+## [0.8.0] — 2026-07-25 — FastAPI service: every engine reachable over HTTP
+
+### New files
+
+| File | Lines | Purpose |
+|---|---|---|
+| `gci/api/datasource.py` | 85 | Connectivity layer: `DataSource` ABC + `SimulatedDataSource` |
+| `gci/api/service.py` | 259 | Business logic, HTTP-independent |
+| `gci/api/app.py` | 157 | FastAPI wiring |
+| `tests/test_api.py` | 204 | 28 tests (17 service-level, 11 through `TestClient`) |
+
+Twelve endpoints live (`whatif`/`copilot` intentionally not stubbed — Phase 2
+modules they'd wrap don't exist yet, and this project does not ship
+placeholder logic). `SimulatedDataSource` generates a small deterministic
+40-event demo corpus at startup and replays it as "live" data, with a
+`row_at(event_id, t_min)` cursor that never returns anything past the
+requested time — the backward-only feature guarantee (D9) carried through to
+the API boundary.
+
+### Bug fixes
+
+1. **`forecast_model.joblib` didn't exist.** `forecast.py` had only ever
+   been exercised against synthetic data in its own tests; the real training
+   script had never been run. Caught because the API's `/api/live` and
+   `/api/recommendations` need it. Run now — see forecast section above for
+   results.
+2. **`HistGradientBoostingRegressor` fallback had no `early_stopping`.**
+   Every classifier factory in `ml/registry.py` sets it; the forecast
+   module's regression fallback didn't, so the first training run burned
+   several extra minutes on iterations past convergence. Fixed to match the
+   existing pattern before the artefact used by the API was persisted.
+3. **NaN in a JSON response crashed the endpoint.** Starlette's default
+   renderer calls `json.dumps(..., allow_nan=False)`; several legitimately
+   NaN values (`settle_min` for a never-settling transition,
+   `mean_confidence_accepted` before any feedback) reached it and raised
+   `ValueError: Out of range float values are not JSON compliant`. Fixed
+   with a `NanSafeJSONResponse` that maps non-finite floats to `null` at the
+   wire boundary only.
+
+### Verified
+
+Smoke-tested against a real `uvicorn` process (not just the in-process test
+client): `/api/health`, `/api/live`, `/api/recommendations` all correct on a
+rushed `LWC-52 -> BRD-120` transition — 100% risk probability with SHAP
+explanation, an optimizer recommendation extending the ramp 6.6 -> 25 min
+predicted to eliminate a 7.9-minute off-spec period, priced at $304.55
+(P10-P90 $213-$411).
+
+### Known issues
+
+1. **`forecast_model.joblib` is 14.3 MB.** Combined with the other `models/`
+   artefacts this may approach the 10 MB submission limit; needs a decision
+   in the reserved packaging block (slim the persisted bundle, or regenerate
+   `models/` at submission time the way `data/` already is).
+2. **Forecast coverage runs ~6-7 points under nominal** (see forecast
+   section) — a known, disclosed limitation of the fallback estimator, not
+   hidden in the reported numbers.
+
+---
+
+## [0.7.0] — 2026-07-25 — Advisory ledger (deliverable 6)
+
+### New files
+
+| File | Lines | Purpose |
+|---|---|---|
+| `gci/ledger.py` | ~185 | Append-only JSON-Lines accept/reject audit trail + quality evaluation |
+| `tests/test_ledger.py` | ~105 | 10 tests |
+
+`record()`/`respond()` log an `Advisory` being surfaced and the operator's
+decision; `evaluate()` reports acceptance rate (overall and per source), mean
+confidence of accepted vs rejected (a calibration check), and realised
+dollar value of accepted advisories. JSON Lines persistence, no database
+dependency. **All six graded deliverables now have a working engine** —
+remaining work is the API surface and dashboard that make them visible.
+
+---
+
+## [0.6.0] — 2026-07-25 — Provenance and advisory packaging (deliverable 5)
+
+### New files
+
+| File | Lines | Purpose |
+|---|---|---|
+| `gci/provenance.py` | ~185 | Unified `Advisory` schema, grounded per-source explanations, `AdvisoryPolicy` gate |
+| `tests/test_provenance.py` | ~135 | 14 tests |
+
+Folds risk predictions, `discovery.CorrelationResult`,
+`optimizer.OptimizationResult` and `stabilization.LoopImpact` into one
+`Advisory` shape with a human explanation grounded in each source's own
+computation (SHAP drivers, measured lag/correlation, the specific plan
+change). `rank_and_gate()` generalises `roi.should_surface` across all
+advisory types: confidence floor always, value floor only where a price
+exists, sorted priced-first, capped at `AdvisoryPolicy.max_concurrent_suggestions`.
+This closes deliverable 5.
+
+---
+
+## [0.5.0] — 2026-07-25 — Stabilization loop impact ranking
+
+### New files
+
+| File | Lines | Purpose |
+|---|---|---|
+| `gci/stabilization.py` | ~150 | Twin-based sensitivity ranking of plan parameters on `settle_min` |
+| `tests/test_stabilization.py` | ~95 | 10 tests |
+
+Perturbs each tunable plan parameter up/down from baseline and measures the
+change in `settle_min` via `optimizer.evaluate_plan` — same physics as the
+optimizer, not a separate approximation. `tau_c_scale` stands in for all
+three PI trim loops (`control.TRIM_PAIRS`) at once. Fixed a first-draft bug
+before it shipped: "best direction" was originally chosen only between the
+two perturbed candidates, which could recommend a change that was worse than
+doing nothing whenever *both* directions hurt. Fixed by including the
+baseline itself in the "best" comparison.
+
+---
+
+## [0.4.0] — 2026-07-25 — Correlation discovery
+
+### New files
+
+| File | Lines | Purpose |
+|---|---|---|
+| `gci/discovery.py` | ~215 | Lagged Pearson correlation + mutual information + novelty vs `KNOWN_LOOPS` |
+| `tests/test_discovery.py` | ~150 | 9 tests, including a planted-signal recovery test |
+
+Sweeps every ordered pair among the 19 process tags, pooling `(cause[t],
+effect[t+lag])` within events only (never across, per D11). Only non-negative
+lags are swept since testing every ordered pair already covers both
+directions. Mutual information at the best lag is computed on a capped
+subsample via `sklearn.feature_selection.mutual_info_regression`. Results are
+classified against `grades.KNOWN_LOOPS` via `is_known_relationship` and
+tagged `Source.CORRELATION_DISCOVERY`. `series_by_tag_from_dataset()` reads
+the persisted corpus directly rather than re-simulating.
+
+**Smoke test on the real corpus** (150-event subsample, 3 min max lag, 0.35
+threshold): 36 correlations found, 26 novel — e.g. `machine_speed -> caliper`
+(r=-0.97), a real indirect coupling through basis weight and the empirical
+density model, correctly flagged as not in `KNOWN_LOOPS`, alongside confirmed
+known loops like `filler_flow -> ash` (r=+0.95).
+
+---
+
+## [0.3.0] — 2026-07-25 — Real hardware: env restore, forecast, ROI, optimizer
+
+Moved off the 45s/3.9GB sandbox onto real hardware. Restored trimmed settings,
+regenerated the corpus at 3x scale, retrained, and completed three Phase 1
+modules: `forecast.py`, `roi.py`, `optimizer.py`.
+
+### Environment restoration
+
+- Random Forest: 150→**300** trees, depth 10→**14**, min leaf 40→**20**.
+- SHAP sample: 600→**3,000** rows. Permutation importance: 1,500 rows/3
+  repeats → **6,000 rows/8 repeats**.
+- Corpus: 500 events (two chunks) → **1,500 events, one call, 72s**.
+- `scripts/train_risk_model.py --perm-repeats` default 3→8.
+
+### New files
+
+| File | Lines | Purpose |
+|---|---|---|
+| `gci/forecast.py` | 349 | Quantile trajectory forecast cone: +2/+5/+10 min basis-weight deviation at P10/P50/P90 |
+| `gci/roi.py` | 187 | Confidence-weighted dollar pricing + `AdvisoryPolicy` surfacing gate |
+| `gci/optimizer.py` | 260 | Coordinate-descent ramp/setpoint search over the twin, cached per scenario |
+| `scripts/train_forecast_model.py` | 127 | CLI: train/evaluate/persist the forecast model |
+| `tests/test_forecast.py` | 218 | 12 tests, leakage-focused |
+| `tests/test_roi.py` | 143 | 19 tests |
+| `tests/test_optimizer.py` | 126 | 9 tests |
+
+### Bug fixes (found during this session)
+
+1. **`_probe()` false negatives on this machine were actually true negatives.**
+   LightGBM and XGBoost both installed via pip but fail at import:
+   `Library not loaded: @rpath/libomp.dylib`. Root cause: this machine's
+   Homebrew is under the Intel prefix (`/usr/local`, likely via Rosetta) while
+   Python and the wheels are native arm64 — the x86_64 `libomp.dylib` cannot
+   satisfy an arm64 rpath, and there is no arm64 Homebrew (`/opt/homebrew`)
+   present to provide the right one. `xgboost-cpu` additionally has no
+   prebuilt wheel for this platform and needs `cmake` (absent) to build from
+   source. **User decision: skip both, proceed with the three
+   always-available models** — exactly the case `ml/registry.py`'s
+   optional-dependency probing (D20) was built for.
+2. **`report_markdown()` crashed `pipeline.save()`** on a missing `tabulate`
+   dependency (`DataFrame.to_markdown()`). All other artefacts (model,
+   metrics, comparisons, SHAP, warning detail) are written before the
+   markdown report in `save()`'s ordering, so this only ever silently left a
+   stale `evaluation_report.md` rather than corrupting anything load-bearing.
+   Fixed by installing `tabulate`.
+3. **Grade code typo in a new test** (`test_forecast.py` used `"SC-58"`,
+   which doesn't exist — the library has `SC-56`). Caught immediately by the
+   test itself failing with a clear `KeyError`.
+
+### Risk model retrained
+
+Selected model changed from LightGBM (500 events, sandbox) to **Histogram
+Gradient Boosting** (1,500 events, this machine — LightGBM/XGBoost
+unavailable, see above). Test set, scored once:
+
+| Metric | Before (500 ev, LightGBM) | After (1,500 ev, HistGBM) |
+|---|---|---|
+| PR-AUC | 0.821 | 0.827 |
+| Event detection rate | 0.847 | 0.827 |
+| Median warning time | 4.50 min | 4.67 min |
+| False alarms / clean event | 0.179 | **0.099** |
+
+Detection delta is within the ~0.05 per-event standard error (Assumption 17)
+and not a meaningful regression; false alarms improved substantially, which
+matters more for an advisory system's credibility than a few points of
+detection rate.
+
+### Design decisions added
+
+D22 (forecast targets kept out of `features.py`), D23 (quantile
+rearrangement over a joint quantile model), D24 (off-spec tonne priced as
+margin + rework), D25 (coordinate descent over a full 3-D grid in the
+optimizer). See `PROJECT_LOG.md` §6 for rationale.
+
+### Known issues
+
+1. **LightGBM/XGBoost unusable on this machine** (see above). Both remain
+   `pip install`ed in case a future environment (e.g. an arm64 Homebrew, or a
+   different machine) resolves the runtime — the registry will pick them up
+   automatically with no code change, per D20.
+2. **`requirements.txt` still does not pin `lightgbm`/`xgboost`/`shap`**,
+   consistent with their optional-dependency status; anyone reproducing this
+   run on a working arm64 Homebrew should `pip install lightgbm xgboost shap`
+   for the full five-model comparison.
+
+---
+
 ## [0.2.0] — 2026-07-25 — ML pipeline + risk prediction model
 
 Phase 1, module 1 complete: a leakage-audited model comparison pipeline and a
