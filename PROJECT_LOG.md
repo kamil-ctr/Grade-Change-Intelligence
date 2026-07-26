@@ -7,10 +7,10 @@ implementation step and kept synchronised with the codebase.
 
 | | |
 |---|---|
-| **Last updated** | 2026-07-25 — frontend complete; **Phase 1 (MVP) fully done** |
+| **Last updated** | 2026-07-26 — Phase 1 (MVP) complete; pre-submission hardening and packaging in progress |
 | **Current phase** | Phase 1 complete (10/10 modules); Phase 2 not started |
-| **Tests** | 226 passing, 0 failing (Python; frontend has no unit test suite — verified live in-browser instead, see below) |
-| **Lines of code** | 7,671 (5,451 source / 1,808 tests / 412 scripts) |
+| **Tests** | 253 passing, 0 failing (Python; frontend has no unit test suite — verified live in-browser instead, see below) |
+| **Lines of code** | 10,394 Python (6,827 source / 2,773 tests / 794 scripts) + 933 frontend |
 | **Submission deadline** | 2026-07-26, 23:59 |
 
 ---
