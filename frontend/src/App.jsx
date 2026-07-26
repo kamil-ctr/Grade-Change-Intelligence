@@ -87,16 +87,16 @@ export default function App() {
       {error && <div className="empty-state" style={{ color: 'var(--status-critical)' }}>{error}</div>}
 
       <div className="grid">
-        <div className="panel span-8">
+        <div className="panel span-4">
           <div className="panel-head">
             <div>
-              <h2>Live risk &amp; forecast cone</h2>
-              <div className="subtitle">Basis-weight deviation, projected +2/+5/+10 min</div>
+              <h2>Basis-Weight Off-Spec Risk</h2>
+              <div className="subtitle">Current deviation and breach probability</div>
             </div>
             <span className="deliverable-tag">Deliverable 3</span>
           </div>
-          {live && (
-            <div className="stat-row" style={{ marginBottom: 12 }}>
+          {live ? (
+            <div className="stat-row">
               <div className="stat-tile">
                 <div className={`value ${Math.abs(live.basis_weight_dev_pct) > 2.5 ? 'critical' : 'good'}`}>
                   {live.basis_weight_dev_pct.toFixed(1)}%
@@ -112,7 +112,22 @@ export default function App() {
                 </div>
               )}
             </div>
+          ) : (
+            <div>
+              <div className="skeleton-line long" />
+              <div className="skeleton-line medium" />
+            </div>
           )}
+        </div>
+
+        <div className="panel span-4">
+          <div className="panel-head">
+            <div>
+              <h2>Basis-Weight Forecast (+2 / +5 / +10 min)</h2>
+              <div className="subtitle">Quantile forecast cone</div>
+            </div>
+            <span className="deliverable-tag">Deliverable 3</span>
+          </div>
           <ForecastCone live={live} />
         </div>
 
