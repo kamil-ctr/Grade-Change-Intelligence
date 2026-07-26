@@ -115,9 +115,8 @@ predictions immediately — no training step required.
 
 | | |
 |---|---|
-| Backend (local) | `http://localhost:8000` |
-| Frontend (local) | `http://localhost:5173` |
-| Live deployment | _add your Render / Vercel URLs here before submitting_ |
+| Backend | `http://localhost:8000` |
+| Frontend | `http://localhost:5173` |
 
 Key API endpoints (12 total, full list in `gci/api/app.py`):
 

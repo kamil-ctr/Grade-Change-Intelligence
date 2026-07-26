@@ -19,10 +19,6 @@ point — this file is a checklist, not a guarantee.
 - [x] `PROJECT_LOG.md` — full design history, header summary current
 - [x] `CHANGELOG.md` — dated, factual, unchanged
 - [x] `DEV_NOTES.md` — internal dev journal (formerly `CLAUDE.md`)
-- [x] `DEPLOYMENT.md` — Render + Vercel setup, grounded in `render.yaml` /
-      `vercel.json` already in the repo
-- [ ] `DEPLOYMENT.md` — fill in the actual live URLs once deployed (see the
-      table at the bottom of that file)
 
 ## Dashboard screenshots (`submission/screenshots/`)
 
@@ -51,7 +47,5 @@ point — this file is a checklist, not a guarantee.
 2. Re-zip: `zip -r ~/Desktop/Grade_Change_Intelligence_Submission_Kamil.zip submission/ -x "*.DS_Store" -x "*/__pycache__/*"`.
 3. Extract the ZIP somewhere clean and confirm it matches `submission/`
    exactly before uploading — don't trust the zip step blindly.
-4. Fill in the live deployment URLs in `DEPLOYMENT.md` and the README's
-   Demo section, if you have them.
-5. Check the HirePro portal directly for any AI-disclosure requirement —
+4. Check the HirePro portal directly for any AI-disclosure requirement —
    nothing in this repository answers that question one way or the other.
