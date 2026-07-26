@@ -64,16 +64,16 @@ in `PROJECT_LOG.md`.
 ## Dashboard Screenshots
 
 **Full dashboard, first load** — six panels, one per graded deliverable:
-![Dashboard overview](submission/screenshots/dashboard-01-overview.png)
+![Dashboard overview](submission/screenshots/dashboard-01-overview.jpg)
 
 **Recommendations** — priced, provenance-tagged, accept/reject:
-![Recommendations panel](submission/screenshots/dashboard-05-recommendations.png)
+![Recommendations panel](submission/screenshots/dashboard-05-recommendations.jpg)
 
 **Trust & ledger** — live acceptance rate and confidence calibration:
-![Trust and ledger panel](submission/screenshots/dashboard-07-accepted.png)
+![Trust and ledger panel](submission/screenshots/dashboard-07-accepted.jpg)
 
 **Correlation explorer** — lagged relationships, novel vs. known loops:
-![Correlation explorer panel](submission/screenshots/dashboard-04-correlations.png)
+![Correlation explorer panel](submission/screenshots/dashboard-04-correlations.jpg)
 
 More panel-by-panel screenshots, including the accept/reject round-trip and
 the raw feedback ledger, are in `submission/screenshots/`.
