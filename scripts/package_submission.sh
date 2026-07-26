@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Builds the hackathon submission zip under the 10 MB limit (CLAUDE.md).
+# Builds the hackathon submission zip under the 10 MB limit (DEV_NOTES.md).
 #
 # The two trained model artefacts (models/*.joblib, ~16 MB combined) are
 # committed to git so the Render-hosted API has real models without a

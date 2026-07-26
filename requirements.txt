@@ -19,7 +19,7 @@ httpx>=0.27          # test-only: FastAPI's TestClient requires it
 
 # Optional: better risk-model comparison and exact SHAP. Probed, never
 # assumed (gci/ml/registry.py) -- the pipeline still yields a usable model
-# without these. See CLAUDE.md's "Known traps" for install gotchas
+# without these. See DEV_NOTES.md's "Known traps" for install gotchas
 # (xgboost-cpu vs xgboost, the libomp requirement on macOS).
 # lightgbm>=4.0
 # xgboost-cpu>=2.0

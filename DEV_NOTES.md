@@ -1,4 +1,4 @@
-# CLAUDE.md — Grade Change Intelligence (GCI)
+# DEV_NOTES.md — Grade Change Intelligence (GCI)
 
 Project memory for Claude Code. Read `PROJECT_LOG.md` for full status and
 `CHANGELOG.md` for history — those two are the source of truth and **must be

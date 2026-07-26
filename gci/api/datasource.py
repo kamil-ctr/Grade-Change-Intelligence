@@ -1,6 +1,6 @@
 """
 Connectivity layer -- the one documented interface every engine above it
-talks to (see `CLAUDE.md`'s seven-layer architecture table).
+talks to (see `DEV_NOTES.md`'s seven-layer architecture table).
 `SimulatedDataSource` is the shipped implementation: a small, freshly
 generated, fully deterministic demo corpus replayed as "live" data. A future
 site-historian connector (OPC-UA, a plant historian) would be a second

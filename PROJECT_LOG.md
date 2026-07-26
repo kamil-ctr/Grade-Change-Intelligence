@@ -29,7 +29,7 @@ implementation step and kept synchronised with the codebase.
 
 ## 1a. Environment restoration (real hardware, 2026-07-25)
 
-The earlier sandbox's 45s/call, ~3.9 GB limits are gone. Per `CLAUDE.md`'s
+The earlier sandbox's 45s/call, ~3.9 GB limits are gone. Per `DEV_NOTES.md`'s
 environment note, restored:
 
 | Setting | Sandbox value | Restored to |
@@ -42,7 +42,7 @@ environment note, restored:
 New corpus health: 1,500 events, 504,000 feature rows, off-spec rate 62.5%,
 settled rate 88.7%, all 42 grade pairs represented, no validation issues.
 
-**Deviation from `CLAUDE.md`'s known traps, found on this machine, not
+**Deviation from `DEV_NOTES.md`'s known traps, found on this machine, not
 predicted by it:** `xgboost-cpu` has no prebuilt wheel for this platform and
 needs `cmake` (not installed) to build from source — plain `xgboost` was
 substituted for the install attempt, but both it and `lightgbm` ultimately
@@ -376,7 +376,7 @@ Vite + plain React (no TypeScript, no component library, no chart library --
 every chart is hand-rolled SVG against the dataviz skill's mark specs and the
 validated reference palette, so the whole production bundle is 207 KB / 65 KB
 gzipped). Six panels, each mapped to exactly one deliverable tag shown in its
-header, matching `CLAUDE.md`'s "six simple panels over three beautiful ones"
+header, matching `DEV_NOTES.md`'s "six simple panels over three beautiful ones"
 guidance:
 
 | Panel | Deliverable | Backed by |
@@ -717,7 +717,7 @@ tests + live in-browser verification), and wired end to end:
   has working evidence without these.
 - **Option B — Reserved block now**: architecture doc, 6-slide deck,
   dashboard screenshots, packaging under 10 MB, clean-checkout rehearsal.
-  `CLAUDE.md` explicitly reserves the last ~2 hours for this and warns
+  `DEV_NOTES.md` explicitly reserves the last ~2 hours for this and warns
   against writing the deck in the final ten minutes.
 
 **Packaging item resolved (2026-07-26):** `scripts/package_submission.sh`
@@ -832,5 +832,5 @@ repo, since Render still needs them) and regenerating from
 
 Full suite is at 251 tests, all green, no regressions from any of today's
 changes. What's left is the deck, the screenshots, and one clean-checkout
-rehearsal — the part CLAUDE.md said to reserve two hours for, and the part
+rehearsal — the part DEV_NOTES.md said to reserve two hours for, and the part
 I intend to actually reserve time for instead of writing at 11pm.

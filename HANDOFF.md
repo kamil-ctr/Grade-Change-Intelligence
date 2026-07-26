@@ -23,7 +23,7 @@ it manually — the destination is what matters.
 Confirm you got everything:
 
 ```bash
-ls          # expect: gci/ scripts/ tests/ models/ CLAUDE.md PROJECT_LOG.md CHANGELOG.md README.md requirements.txt
+ls          # expect: gci/ scripts/ tests/ models/ DEV_NOTES.md PROJECT_LOG.md CHANGELOG.md README.md requirements.txt
 ```
 
 ---
@@ -67,7 +67,7 @@ Two install gotchas that cost real time in the sandbox:
 
 ```bash
 pip install xgboost-cpu      # NOT xgboost — default wheel bundles 131 MB of CUDA
-pip install shap             # needs numba/llvmlite; optional, see CLAUDE.md
+pip install shap             # needs numba/llvmlite; optional, see DEV_NOTES.md
 ```
 
 Verify before doing anything else:
@@ -87,7 +87,7 @@ cd ~/projects/gci
 claude
 ```
 
-`CLAUDE.md` loads automatically — it contains the architecture, the
+`DEV_NOTES.md` loads automatically — it contains the architecture, the
 non-negotiable rules, current state, the next task, and the known traps.
 
 ---
@@ -96,7 +96,7 @@ non-negotiable rules, current state, the next task, and the known traps.
 
 Paste this as your first message:
 
-> Read CLAUDE.md, PROJECT_LOG.md and CHANGELOG.md to load the project state.
+> Read DEV_NOTES.md, PROJECT_LOG.md and CHANGELOG.md to load the project state.
 >
 > This is a Honeywell hackathon submission due 2026-07-26 23:59. Phase 0 and
 > Phase 1 module 1 (the ML pipeline and risk model) are complete with 115 tests
@@ -104,7 +104,7 @@ Paste this as your first message:
 >
 > First: I'm now on real hardware, not the constrained sandbox the earlier work
 > was done in. Restore the settings listed in the "Environment note" section of
-> CLAUDE.md — Random Forest capacity, SHAP and permutation-importance sample
+> DEV_NOTES.md — Random Forest capacity, SHAP and permutation-importance sample
 > sizes — regenerate the corpus at 1500 events in one run, and retrain. Confirm
 > the metrics improve or stay stable, and report event detection rate and median
 > warning time.
@@ -128,7 +128,7 @@ Paste this as your first message:
 | Stop it mid-task | **Esc** |
 | Go back to an earlier point | **Esc Esc**, or `/rewind` |
 | Fewer permission prompts for tests | `/permissions` → allow `Bash(python -m unittest:*)` |
-| Save a new convention to memory | `#` followed by the rule — it offers to write it to CLAUDE.md |
+| Save a new convention to memory | `#` followed by the rule — it offers to write it to DEV_NOTES.md |
 | Check context usage | `/context` |
 | Compact a long session | `/compact` |
 | Review its work | `git diff`, or the `/code-review` command |

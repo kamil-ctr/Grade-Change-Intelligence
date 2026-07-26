@@ -13,7 +13,7 @@ Pricing model
 -------------
 An off-spec tonne is assumed reworked as broke rather than downgraded and
 shipped (the conservative, defensible assumption on this machine -- see
-`CLAUDE.md`'s known limitations). It is therefore doubly costly versus prime
+`DEV_NOTES.md`'s known limitations). It is therefore doubly costly versus prime
 product: it earns none of the mill's margin (`net_margin_per_tonne`) *and* it
 must be repulped (`rework_cost_per_tonne`). The dollar value of avoiding one
 off-spec tonne is the sum of both terms, not either alone.
