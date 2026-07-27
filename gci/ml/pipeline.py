@@ -659,7 +659,7 @@ class RiskModelPipeline:
                 "spec_pct": C.BW_SPEC_PCT,
             }
             path = out_dir / "risk_model.joblib"
-            joblib.dump(bundle, path)
+            joblib.dump(bundle, path, compress=3)
             written["model"] = path
         except Exception as exc:  # pragma: no cover - environment dependent
             self._log(f"  WARNING: could not persist model ({exc})")
