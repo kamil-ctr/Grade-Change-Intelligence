@@ -15,7 +15,9 @@ on the trained artefacts at all, so they keep working regardless.
 from __future__ import annotations
 
 import dataclasses
+import logging
 import threading
+import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -39,6 +41,8 @@ from ..provenance import (
 )
 from ..stabilization import rank_loop_impact
 from .datasource import DataSource, SimulatedDataSource
+
+logger = logging.getLogger(__name__)
 
 
 def _plan_from_meta(plan: Dict[str, float]) -> ControlPlan:
@@ -72,41 +76,75 @@ class GCIService:
         self.risk_load_error: Optional[str] = None
         self.forecast_bundle: Optional[dict] = None
         self.forecast_load_error: Optional[str] = None
+        self.models_loading: bool = True
         self._correlations_cache: Optional[List[dict]] = None
 
         self.datasource: DataSource = datasource or SimulatedDataSource()
-        self._load_models()
+
+        # Model loading (a multi-second, disk-bound deserialization on a
+        # constrained host -- see `_load_models`) used to run synchronously
+        # right here, which meant nothing -- not even `/api/health` -- could
+        # respond until it finished, because this constructor runs at
+        # *import* time (`app.py`'s module-level `service = GCIService(...)`)
+        # before uvicorn ever binds the port. Loading in the background lets
+        # the process become request-ready immediately; `risk_bundle` /
+        # `forecast_bundle` stay `None` (and `models_loading` stays `True`)
+        # for the few seconds it takes, which every caller already handles
+        # gracefully per this module's "demo-cannot-fail" posture.
+        threading.Thread(target=self._load_models, daemon=True).start()
 
         # Correlation discovery sweeps ~340 tag pairs x dozens of lags; on a
         # resource-constrained host (e.g. a free-tier deploy with a fraction
         # of a CPU core) that can take well over a minute -- long enough to
-        # time out a live request. Warm it in the background instead: the
-        # server becomes responsive immediately, `/api/correlations` returns
-        # an empty list until the first sweep finishes, then the cached
-        # result thereafter. Never recomputed inline by a request thread.
-        threading.Thread(target=self._warm_correlations_cache, daemon=True).start()
+        # time out a live request, and long enough to starve the *other*
+        # background thread and the first real requests of CPU time on a
+        # single shared core right when the process is least warmed up.
+        # Staggering its start a few seconds after boot gives the model load
+        # and the first health checks / requests a clear run at the CPU
+        # first. `/api/correlations` returns an empty list until the sweep
+        # finishes, then the cached result thereafter -- never recomputed
+        # inline by a request thread.
+        _correlations_timer = threading.Timer(8.0, self._warm_correlations_cache)
+        _correlations_timer.daemon = True
+        _correlations_timer.start()
 
     def _warm_correlations_cache(self) -> None:
+        t0 = time.perf_counter()
         try:
             self._correlations_cache = [r.to_dict() for r in self._compute_correlations()]
         except Exception:
             self._correlations_cache = []
+        logger.info(
+            "correlation cache warmed in %.2fs (%d results)",
+            time.perf_counter() - t0, len(self._correlations_cache),
+        )
 
     def _load_models(self) -> None:
+        t0 = time.perf_counter()
         try:
             self.risk_bundle = joblib.load(self.models_dir / "risk_model.joblib")
         except Exception as exc:
             self.risk_load_error = f"{exc.__class__.__name__}: {exc}"
+            logger.warning("risk model failed to load: %s", self.risk_load_error)
 
         try:
             self.forecast_bundle = load_forecast_bundle(self.models_dir / "forecast_model.joblib")
         except Exception as exc:
             self.forecast_load_error = f"{exc.__class__.__name__}: {exc}"
+            logger.warning("forecast model failed to load: %s", self.forecast_load_error)
+
+        self.models_loading = False
+        logger.info(
+            "model load finished in %.2fs (risk=%s, forecast=%s)",
+            time.perf_counter() - t0,
+            self.risk_bundle is not None, self.forecast_bundle is not None,
+        )
 
     # -- health --------------------------------------------------------
     def health(self) -> dict:
         return {
             "status": "ok",
+            "models_loading": self.models_loading,
             "risk_model_loaded": self.risk_bundle is not None,
             "risk_model_error": self.risk_load_error,
             "forecast_model_loaded": self.forecast_bundle is not None,
@@ -184,6 +222,16 @@ class GCIService:
 
     # -- recommendations ---------------------------------------------------
     def recommendations(self, event_id: int, t_min: float) -> List[Advisory]:
+        t0 = time.perf_counter()
+        try:
+            return self._recommendations(event_id, t_min)
+        finally:
+            logger.info(
+                "recommendations(event_id=%s, t_min=%s) took %.2fs",
+                event_id, t_min, time.perf_counter() - t0,
+            )
+
+    def _recommendations(self, event_id: int, t_min: float) -> List[Advisory]:
         ev = self.datasource.get_event(event_id)
         row = self.datasource.row_at(event_id, t_min)
         advisories: List[Advisory] = []

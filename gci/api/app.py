@@ -8,20 +8,30 @@ Run with:
 """
 from __future__ import annotations
 
+import logging
 import math
 import os
+import time
 from pathlib import Path
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
-from .service import GCIService
+# Configured before `GCIService` is constructed below, so its background
+# model-load and correlation-warm threads log through this too -- on a host
+# whose only visibility is a log stream (Render), timing lines are the only
+# way to tell a slow cold start from a stuck one.
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+
+from .service import GCIService  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
+_startup_t0 = time.perf_counter()
 
 
 def _sanitize(obj):
@@ -51,6 +61,14 @@ class NanSafeJSONResponse(JSONResponse):
         return super().render(_sanitize(content))
 
 
+logger = logging.getLogger(__name__)
+
+# `GCIService.__init__` loads models and warms the correlation cache on
+# background threads (see service.py) rather than blocking here, so this
+# returns almost immediately -- uvicorn can bind and start answering
+# `/api/health` within a second or two of process start, instead of waiting
+# out however long deserializing ~15 MB of joblib artefacts takes on a
+# constrained host.
 service = GCIService(
     models_dir=ROOT / "models",
     data_dir=ROOT / "data",
@@ -78,6 +96,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# `/api/events/{id}` returns full per-sample time series (~336 rows x
+# several tags) and the JSON responses here are otherwise verbose keys over
+# small numbers -- both compress well. Gzip cuts real bytes over the wire on
+# a free-tier host where bandwidth/CPU are both constrained, at negligible
+# CPU cost for payloads this size.
+app.add_middleware(GZipMiddleware, minimum_size=500)
+
+logger.info("app module ready in %.2fs (models load in the background)", time.perf_counter() - _startup_t0)
 
 
 @app.exception_handler(RequestValidationError)
