@@ -1,0 +1,27 @@
+name: Keep Render backend warm
+
+# Render's free tier spins a web service down after 15 min idle; the next
+# request pays a full cold boot. Pinging /api/health (which never touches
+# the ML models -- see gci/api/service.py) well inside that 15-minute
+# window keeps the instance warm without triggering model load or the
+# correlation-discovery sweep on every ping.
+#
+# Trade-off, stated plainly: this keeps the free-tier instance running
+# effectively 24/7, which uses Render's free monthly instance-hours (750/mo
+# covers exactly one always-on service) and only masks the spin-down rather
+# than removing it -- a deploy, a Render-side restart, or a missed run still
+# means the next real request eats a cold start. It does not fix CPU/RAM
+# limits. The only way to remove spin-down entirely is a paid plan.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping /api/health
+        run: |
+          curl -fsS --max-time 20 https://gci-api.onrender.com/api/health \
+            || echo "ping failed (service may be mid cold-start) -- not fatal"
