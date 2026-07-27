@@ -22,16 +22,31 @@ through a track record instead of asking for it up front.
 
 ---
 
+## Contents
+
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Dashboard](#dashboard)
+- [Results](#results)
+- [Deliverables Mapping](#deliverables-mapping)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Technical Details](#technical-details)
+- [Team](#team)
+- [License](#license)
+
+---
+
 ## Key Features
 
-✓ **Predict instability** — risk model flags off-spec probability while a transition is still in progress, not after the fact
-✓ **Forecast basis weight** — quantile cone at +2 / +5 / +10 min, not a single point estimate
-✓ **Recommend safe corrective actions** — setpoint optimizer proposes a specific, physically feasible plan change
-✓ **Explain every recommendation** — exact SHAP attribution, in the same units an operator already reads
-✓ **Source-of-inference tagging** — every suggestion is labelled learned model, physics/recipe rule, or recipe constraint, never left unattributed
-✓ **Operator feedback ledger** — every accept/reject is recorded as an auditable, timestamped event
-✓ **Trust scoring** — live acceptance rate and confidence calibration, not a one-time claim
-✓ **ROI estimation** — every recommendation is priced in dollars, with a P10–P90 uncertainty band
+- ✓ **Predict instability** — risk model flags off-spec probability while a transition is still in progress, not after the fact
+- ✓ **Forecast basis weight** — quantile cone at +2 / +5 / +10 min, not a single point estimate
+- ✓ **Recommend safe corrective actions** — setpoint optimizer proposes a specific, physically feasible plan change
+- ✓ **Explain every recommendation** — exact SHAP attribution, in the same units an operator already reads
+- ✓ **Source-of-inference tagging** — every suggestion is labelled learned model, physics/recipe rule, or recipe constraint, never left unattributed
+- ✓ **Operator feedback ledger** — every accept/reject is recorded as an auditable, timestamped event
+- ✓ **Trust scoring** — live acceptance rate and confidence calibration, not a one-time claim
+- ✓ **ROI estimation** — every recommendation is priced in dollars, with a P10–P90 uncertainty band
 
 ---
 
@@ -61,22 +76,53 @@ in `PROJECT_LOG.md`.
 
 ---
 
-## Dashboard Screenshots
+## Dashboard
 
-**Full dashboard, first load** — six panels, one per graded deliverable:
-![Dashboard overview](submission/screenshots/dashboard-01-overview.jpg)
+<p align="center">
+  <img src="./submission/screenshots/dashboard-01-overview.jpg" width="850" alt="Full GCI dashboard on first load, showing all six panels: risk, forecast, correlations, recommendations, stabilization, and trust and ledger">
+</p>
+<p align="center"><sub><b>Full dashboard, first load</b> — six panels, one per graded deliverable</sub></p>
 
-**Recommendations** — priced, provenance-tagged, accept/reject:
-![Recommendations panel](submission/screenshots/dashboard-05-recommendations.jpg)
+### Panel by panel
 
-**Trust & ledger** — live acceptance rate and confidence calibration:
-![Trust and ledger panel](submission/screenshots/dashboard-07-accepted.jpg)
+<p align="center">
+  <img src="./submission/screenshots/dashboard-02-risk.jpg" width="440" alt="Basis-weight off-spec risk panel showing the live risk score during a grade transition">
+  &nbsp;&nbsp;
+  <img src="./submission/screenshots/dashboard-03-forecast.jpg" width="440" alt="Basis-weight forecast panel showing the quantile forecast cone at plus 2, 5, and 10 minutes">
+</p>
+<p align="center"><sub><b>Off-spec risk</b> (left) and <b>forecast cone</b> (right) — risk score and quantile trajectory for the current transition</sub></p>
 
-**Correlation explorer** — lagged relationships, novel vs. known loops:
-![Correlation explorer panel](submission/screenshots/dashboard-04-correlations.jpg)
+<p align="center">
+  <img src="./submission/screenshots/dashboard-04-correlations.jpg" width="760" alt="Correlation explorer panel showing lagged relationships between process variables, flagging novel versus known control loops">
+</p>
+<p align="center"><sub><b>Correlation explorer</b> — lagged relationships, novel vs. known loops</sub></p>
 
-More panel-by-panel screenshots, including the accept/reject round-trip and
-the raw feedback ledger, are in `submission/screenshots/`.
+<p align="center">
+  <img src="./submission/screenshots/dashboard-05-recommendations.jpg" width="760" alt="Recommendations panel showing a priced, provenance-tagged setpoint recommendation with accept and reject controls">
+</p>
+<p align="center"><sub><b>Recommendations</b> — priced, provenance-tagged, accept/reject</sub></p>
+
+<p align="center">
+  <img src="./submission/screenshots/dashboard-06-stabilization.jpg" width="760" alt="Stabilization impact panel ranking control loops by sensitivity to settling time">
+</p>
+<p align="center"><sub><b>Stabilization impact</b> — loops and setpoints ranked by effect on settling time</sub></p>
+
+<p align="center">
+  <img src="./submission/screenshots/dashboard-07-accepted.jpg" width="760" alt="Trust and ledger panel showing live acceptance rate and confidence calibration after a recommendation was accepted">
+</p>
+<p align="center"><sub><b>Trust & ledger</b> — live acceptance rate and confidence calibration</sub></p>
+
+### Accept/reject round-trip and audit trail
+
+<p align="center">
+  <img src="./submission/screenshots/dashboard-08-rejected.jpg" width="760" alt="Trust and ledger panel showing the same view after a recommendation was rejected, for comparison with the accepted state">
+</p>
+<p align="center"><sub><b>Trust & ledger, rejected state</b> — compare against the accepted state above</sub></p>
+
+<p align="center">
+  <img src="./submission/screenshots/dashboard-09-ledger.jpg" width="700" alt="Raw operator feedback ledger table, a timestamped accept/reject audit trail">
+</p>
+<p align="center"><sub><b>Feedback ledger</b> — every accept/reject recorded as an auditable, timestamped event</sub></p>
 
 ---
 
