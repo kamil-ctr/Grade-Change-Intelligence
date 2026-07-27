@@ -16,6 +16,7 @@ and avoids a database dependency this hackathon build does not need.
 from __future__ import annotations
 
 import json
+import threading
 import time
 import uuid
 from dataclasses import dataclass
@@ -55,6 +56,8 @@ class AdvisoryLedger:
 
     def __init__(self) -> None:
         self.entries: List[LedgerEntry] = []
+        self._saved_count: int = 0
+        self._save_lock = threading.Lock()
 
     # -- capture -------------------------------------------------------
     def record(
@@ -106,11 +109,25 @@ class AdvisoryLedger:
 
     # -- persistence -----------------------------------------------------
     def save(self, path) -> Path:
+        """
+        Append-only. `recommendations()` calls this on every request, and a
+        live demo session can accumulate thousands of entries -- rewriting
+        the whole file from scratch on every call turned every request into
+        an O(entries-so-far) disk write that got slower for the rest of the
+        session. `_saved_count` tracks how much of `self.entries` is already
+        on disk so each call only writes what's new. Recorded data is
+        unchanged; only how it reaches disk is.
+        """
         path = Path(path)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        with path.open("w") as f:
-            for entry in self.entries:
-                f.write(json.dumps(entry.to_dict()) + "\n")
+        with self._save_lock:
+            new_entries = self.entries[self._saved_count:]
+            if not new_entries:
+                return path
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with path.open("a") as f:
+                for entry in new_entries:
+                    f.write(json.dumps(entry.to_dict()) + "\n")
+            self._saved_count = len(self.entries)
         return path
 
     @classmethod
@@ -125,6 +142,7 @@ class AdvisoryLedger:
                 if not line:
                     continue
                 ledger.entries.append(LedgerEntry(**json.loads(line)))
+        ledger._saved_count = len(ledger.entries)
         return ledger
 
     # -- quality evaluation ------------------------------------------------
