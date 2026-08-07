@@ -111,15 +111,17 @@ class TestGCIService(unittest.TestCase):
     def test_correlations_never_blocks_and_reads_the_cache(self):
         # `correlations()` must never trigger a computation itself -- it only
         # reflects whatever the background warm thread has set. An empty
-        # cache reads as an empty list; a populated cache is returned as-is.
+        # cache reads as an empty list with warming=True; a populated cache
+        # is returned as-is with warming=False.
         self.service._correlations_cache = None
-        self.assertEqual(self.service.correlations(), [])
+        self.assertEqual(self.service.correlations(), {"warming": True, "results": []})
 
         sentinel = [{"cause": "a", "effect": "b"}]
         self.service._correlations_cache = sentinel
         first = self.service.correlations()
         second = self.service.correlations()
-        self.assertIs(first, second)
+        self.assertFalse(first["warming"])
+        self.assertIs(first["results"], second["results"])
 
     def test_stabilization_returns_ranked_parameters(self):
         eid = self.service.default_event_id()
@@ -194,7 +196,9 @@ class TestApiEndpoints(unittest.TestCase):
     def test_correlations_endpoint(self):
         r = self.client.get("/api/correlations")
         self.assertEqual(r.status_code, 200)
-        self.assertIsInstance(r.json(), list)
+        body = r.json()
+        self.assertIn("warming", body)
+        self.assertIsInstance(body["results"], list)
 
     def test_stabilization_endpoint(self):
         r = self.client.get("/api/stabilization")

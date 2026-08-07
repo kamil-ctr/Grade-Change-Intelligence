@@ -298,15 +298,23 @@ class GCIService:
             series, max_lag_min=max_lag_min, min_abs_correlation=min_abs_correlation,
         )
 
-    def correlations(self) -> List[dict]:
+    def correlations(self) -> dict:
         """
         Never computes inline -- always returns whatever the background warm
         (kicked off at startup, see `__init__`) has produced so far: an empty
         list before it finishes, the real result after. A request thread
         must never pay for a sweep that can take over a minute on a
         constrained host.
+
+        `warming` lets a caller tell "the sweep hasn't finished yet" apart
+        from "the sweep finished and found nothing above threshold" -- both
+        read as an empty `results` list, but only one of them means try
+        again shortly.
         """
-        return self._correlations_cache or []
+        return {
+            "warming": self._correlations_cache is None,
+            "results": self._correlations_cache or [],
+        }
 
     def stabilization(self, event_id: int) -> List[dict]:
         ev = self.datasource.get_event(event_id)

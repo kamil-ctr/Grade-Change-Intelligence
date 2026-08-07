@@ -272,6 +272,39 @@ button.btn:disabled { opacity: 0.5; cursor: default; }
 .skeleton-line.medium { width: 65%; }
 .skeleton-line.long { width: 90%; }
 
+/* -- connecting screen -- shown from mount until /api/health resolves, so
+   the first paint is never blank while a cold Render container boots. */
+.connecting-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  gap: 24px;
+  text-align: center;
+}
+.connecting-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 420px;
+}
+.connecting-card .skeleton-line { margin: 10px auto; }
+.connecting-message { font-size: 13px; color: var(--text-secondary); margin: 0 0 16px; line-height: 1.5; }
+.spinner {
+  width: 26px;
+  height: 26px;
+  margin: 0 auto 14px;
+  border: 3px solid var(--gridline);
+  border-top-color: var(--series-1);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
 /* -- economics form ------------------------------------------------------------- */
 .econ-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 16px; }
 .econ-form .field { gap: 4px; }

@@ -9,6 +9,8 @@ import EconomicsPanel from './components/EconomicsPanel'
 
 export default function App() {
   const [health, setHealth] = useState(null)
+  const [healthError, setHealthError] = useState(null)
+  const [healthRetryCount, setHealthRetryCount] = useState(0)
   const [events, setEvents] = useState([])
   const [eventId, setEventId] = useState(null)
   const [tMin, setTMin] = useState(12)
@@ -18,27 +20,44 @@ export default function App() {
   // message instead of flashing "no data" before the first response lands.
   const [advisories, setAdvisories] = useState(null)
   const [correlations, setCorrelations] = useState(null)
+  const [correlationsWarming, setCorrelationsWarming] = useState(false)
   const [stabilization, setStabilization] = useState(null)
   const [trust, setTrust] = useState(null)
   const [economics, setEconomics] = useState(null)
   const [error, setError] = useState(null)
 
+  // /api/health fires alone, first. On a cold instance the other 7 calls
+  // would otherwise stack up and all stall together; firing health first
+  // and gating everything else on it turns 8 simultaneous cold-start
+  // timeouts into one clear "waking up" signal, and by the time health
+  // resolves the container is warm for what follows.
   useEffect(() => {
-    api.health().then(setHealth).catch((e) => setError(e.message))
+    let cancelled = false
+    setHealthError(null)
+    api.health().then((h) => { if (!cancelled) setHealth(h) })
+      .catch((e) => { if (!cancelled) setHealthError(e.message) })
+    return () => { cancelled = true }
+  }, [healthRetryCount])
+
+  useEffect(() => {
+    if (!health) return
     api.events().then((evs) => {
       setEvents(evs)
       const riskiest = [...evs].sort((a, b) => b.max_abs_dev_pct - a.max_abs_dev_pct)[0]
       setEventId(riskiest?.event_id ?? evs[0]?.event_id)
     }).catch((e) => setError(e.message))
-    api.correlations().then(setCorrelations).catch(() => {})
+    api.correlations().then((r) => {
+      setCorrelations(r.results)
+      setCorrelationsWarming(r.warming)
+    }).catch(() => {})
     api.economics().then(setEconomics).catch(() => {})
-  }, [])
+  }, [health])
 
   const refreshTrust = useCallback(() => {
     api.trust().then(setTrust).catch(() => {})
   }, [])
 
-  useEffect(() => { refreshTrust() }, [refreshTrust])
+  useEffect(() => { if (health) refreshTrust() }, [health, refreshTrust])
 
   useEffect(() => {
     if (eventId == null) return
@@ -48,6 +67,41 @@ export default function App() {
   }, [eventId, tMin])
 
   const current = events.find((e) => e.event_id === eventId)
+
+  // Paints immediately on mount (health starts null, no API call awaited)
+  // and stays up until /api/health resolves -- the one moment in the whole
+  // app where the user would otherwise see a blank page.
+  if (!health) {
+    return (
+      <div className="app">
+        <div className="connecting-screen">
+          <div className="brand" style={{ flexDirection: 'column', gap: 4 }}>
+            <h1>Grade Change Intelligence</h1>
+            <span className="tagline">Advisory only &middot; never writes to the control system</span>
+          </div>
+          <div className="connecting-card">
+            <div className="spinner" />
+            <p className="connecting-message">
+              {healthError
+                ? `Server didn't respond after several tries (${healthError}).`
+                : 'Waking up the server — first load can take up to a minute.'}
+            </p>
+            {healthError ? (
+              <button className="btn" onClick={() => setHealthRetryCount((c) => c + 1)}>
+                Retry
+              </button>
+            ) : (
+              <>
+                <div className="skeleton-line long" />
+                <div className="skeleton-line medium" />
+                <div className="skeleton-line short" />
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="app">
@@ -150,7 +204,7 @@ export default function App() {
             </div>
             <span className="deliverable-tag">Deliverable 3</span>
           </div>
-          <CorrelationTable correlations={correlations} />
+          <CorrelationTable correlations={correlations} warming={correlationsWarming} />
         </div>
 
         <div className="panel span-6">

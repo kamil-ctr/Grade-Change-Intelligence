@@ -1,4 +1,4 @@
-export default function CorrelationTable({ correlations }) {
+export default function CorrelationTable({ correlations, warming }) {
   if (correlations === null) {
     return (
       <div>
@@ -7,6 +7,9 @@ export default function CorrelationTable({ correlations }) {
         <div className="skeleton-line long" />
       </div>
     )
+  }
+  if (warming) {
+    return <div className="empty-state">Warming up &mdash; sweeping historical corpus&hellip;</div>
   }
   if (correlations.length === 0) {
     return <div className="empty-state">No correlations above threshold in this sample.</div>
